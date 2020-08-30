@@ -1,0 +1,308 @@
+The query file '../Resources/test1_q.graph' doesn't exist.
+1. Load query graphs and build query graph index done. ../Resources/test1_q.graph
+The data file '../Resources/test1_d.graph' doesn't exist.
+The query file '../Resources/test1_q.graph' doesn't exist.
+1. Load query graphs and build query graph index done. ../Resources/test1_q.graph
+The data file '../Resources/test1_d.graph' doesn't exist.
+The query file '../Resources/test1_q.graph' doesn't exist.
+1. Load query graphs and build query graph index done. ../Resources/test1_q.graph
+The data file '../Resources/test1_d.graph' doesn't exist.
+The query file '../Resources/test1_q.graph' doesn't exist.
+1. Load query graphs and build query graph index done. ../Resources/test1_q.graph
+The data file '../Resources/test1_d.graph' doesn't exist.
+The query file '../Resources/test1_q.graph' doesn't exist.
+1. Load query graphs and build query graph index done. ../Resources/test1_q.graph
+The data file '../Resources/test1_d.graph' doesn't exist.
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+
+TLS Simi Matrix 
+    0 1 2 
+(0) 0 0.833333 0.833333 
+(1) 0 0 0.833333 
+(2) 0 0 0 
+
+Relative Tls Matrix after threshold : 0.5
+    0 1 2 
+(0) 0 1 1 
+(1) 1 0 1 
+(2) 1 1 0 
+Clique size: 3
+ 2 1 0
+TLS: Total cliques: 1
+
+Graph0
+Parent graph: 3(N),
+
+Graph1
+Parent graph: 3(N),
+
+Graph2
+Parent graph: 3(N),
+
+Graph3
+Descendent graph: 0(*),1(*),2(*),
+Children graph: 0(*),1(*),2(*),
+
+****PCM Information: 
+PCM edges: 3
+PCM newly nodes : 1
+PCM query nodes : 3
+PCM Euivalent nodes : 0
+
+Query Execution Order: 3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,}, 
+ MQO Time: 106.962(milliseconds)
+
+ SQO Average Time: 39.857(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+
+TLS Simi Matrix 
+    0 1 2 
+(0) 0 0.833333 0.833333 
+(1) 0 0 0.833333 
+(2) 0 0 0 
+
+Relative Tls Matrix after threshold : 0.5
+    0 1 2 
+(0) 0 1 1 
+(1) 1 0 1 
+(2) 1 1 0 
+Clique size: 3
+ 2 1 0
+TLS: Total cliques: 1
+
+Graph0
+Parent graph: 3(N),
+
+Graph1
+Parent graph: 3(N),
+
+Graph2
+Parent graph: 3(N),
+
+Graph3
+Descendent graph: 0(*),1(*),2(*),
+Children graph: 0(*),1(*),2(*),
+
+****PCM Information: 
+PCM edges: 3
+PCM newly nodes : 1
+PCM query nodes : 3
+PCM Euivalent nodes : 0
+
+Query Execution Order: 3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,}, 
+ MQO Time: 109.523(milliseconds)
+
+ SQO Average Time: 41.2187(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+
+TLS Simi Matrix 
+    0 1 2 
+(0) 0 0.833333 0.833333 
+(1) 0 0 0.833333 
+(2) 0 0 0 
+
+Relative Tls Matrix after threshold : 0.5
+    0 1 2 
+(0) 0 1 1 
+(1) 1 0 1 
+(2) 1 1 0 
+Clique size: 3
+ 2 1 0
+TLS: Total cliques: 1
+
+Graph0
+Parent graph: 3(N),
+
+Graph1
+Parent graph: 3(N),
+
+Graph2
+Parent graph: 3(N),
+
+Graph3
+Descendent graph: 0(*),1(*),2(*),
+Children graph: 0(*),1(*),2(*),
+
+****PCM Information: 
+PCM edges: 3
+PCM newly nodes : 1
+PCM query nodes : 3
+PCM Euivalent nodes : 0
+3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,},  MQO Time: 85.0785(milliseconds)
+
+ SQO Average Time: 24.3943(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+
+TLS Simi Matrix 
+    0 1 2 
+(0) 0 0.833333 0.833333 
+(1) 0 0 0.833333 
+(2) 0 0 0 
+
+Relative Tls Matrix after threshold : 0.5
+    0 1 2 
+(0) 0 1 1 
+(1) 1 0 1 
+(2) 1 1 0 
+Clique size: 3
+ 2 1 0
+TLS: Total cliques: 1
+
+Graph0
+Parent graph: 3(N),
+
+Graph1
+Parent graph: 3(N),
+
+Graph2
+Parent graph: 3(N),
+
+Graph3
+Descendent graph: 0(*),1(*),2(*),
+Children graph: 0(*),1(*),2(*),
+
+****PCM Information: 
+PCM edges: 3
+PCM newly nodes : 1
+PCM query nodes : 3
+PCM Euivalent nodes : 0
+3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,},  MQO Time: 59.0374(milliseconds)
+
+
+ SQO Average Time: 19.9786(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+
+TLS Simi Matrix 
+    0 1 2 
+(0) 0 0.833333 0.833333 
+(1) 0 0 0.833333 
+(2) 0 0 0 
+
+Relative Tls Matrix after threshold : 0.5
+    0 1 2 
+(0) 0 1 1 
+(1) 1 0 1 
+(2) 1 1 0 
+Clique size: 3
+ 2 1 0
+TLS: Total cliques: 1
+
+Graph0
+Parent graph: 3(N),
+
+Graph1
+Parent graph: 3(N),
+
+Graph2
+Parent graph: 3(N),
+
+Graph3
+Descendent graph: 0(*),1(*),2(*),
+Children graph: 0(*),1(*),2(*),
+
+****PCM Information: 
+PCM edges: 3
+PCM newly nodes : 1
+PCM query nodes : 3
+PCM Euivalent nodes : 0
+3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,},  MQO Time: 73.8424(milliseconds)
+
+
+ SQO Average Time: 24.2182(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+    0 1 2 
+(0) 0 0.833333 0.833333 
+(1) 0 0 0.833333 
+(2) 0 0 0 
+
+Relative Tls Matrix after threshold : 0.5
+    0 1 2 
+(0) 0 1 1 
+(1) 1 0 1 
+(2) 1 1 0 
+Clique size: 3
+ 2 1 0
+TLS: Total cliques: 1
+
+Graph0
+Parent graph: 3(N),
+
+Graph1
+Parent graph: 3(N),
+
+Graph2
+Parent graph: 3(N),
+
+Graph3
+Descendent graph: 0(*),1(*),2(*),
+Children graph: 0(*),1(*),2(*),
+
+****PCM Information: 
+PCM edges: 3
+PCM newly nodes : 1
+PCM query nodes : 3
+PCM Euivalent nodes : 0
+3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,},  MQO Time: 3479.34(milliseconds)
+
+
+ SQO Average Time: 52.4405(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+3->{ Release }, 0->{ Release }, 1->{ Release }, 2->{ Release 3,},  MQO Time: 146.515(milliseconds)
+
+
+ SQO Average Time: 33.8696(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+ MQO Time: 157.46(milliseconds)
+
+
+ SQO Average Time: 36.9684(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+ MQO Time: 119.353(milliseconds)
+
+
+ SQO Average Time: 28.6989(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+ MQO Time: 141.106(milliseconds)
+
+
+ SQO Average Time: 38.4205(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+ MQO Time: 105.11(milliseconds)
+
+
+ SQO Average Time: 22.8618(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+ MQO Time: 194.641(milliseconds)
+
+
+ SQO Average Time: 38.8056(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph
+ MQO Time: 140.246(milliseconds)
+
+
+ SQO Average Time: 29.9174(milliseconds)
+1. Load query graphs and build query graph index done. ../Resources/mqo_test_q.graph
+Load data graphs and build data graph index done. ../Resources/mqo_test_d.graph

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{289B82B1-1F79-4253-8823-7E90F9C13081}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MQO</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\CommonUtility;$(SolutionDir)\Graph;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\CommonUtility;$(SolutionDir)\Graph;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonUtility\CommonUtility.vcxproj">
+      <Project>{061f629a-d158-4f83-924c-c06399518338}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Graph\Graph.vcxproj">
+      <Project>{792e640d-5de4-4dec-b1b7-a12d903706b1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CacheResultsTest.cpp" />
+    <ClCompile Include="CacheRetrieval.cpp" />
+    <ClCompile Include="ComboLinkedLists.cpp" />
+    <ClCompile Include="CoreVertexSpanOverlapQG.cpp" />
+    <ClCompile Include="DebugGraphOverlapQG.cpp" />
+    <ClCompile Include="FindAllMaximalCliques.cpp" />
+    <ClCompile Include="FindAllMaximalCommonSubgraphs.cpp" />
+    <ClCompile Include="FindMaximumCommonSubgraph.cpp" />
+    <ClCompile Include="fptree.cpp" />
+    <ClCompile Include="FrequentPatternGroup.cpp" />
+    <ClCompile Include="main_debug.cpp" />
+    <ClCompile Include="OverlapQueryGenerator.cpp" />
+    <ClCompile Include="CoreSubgraphSpanOverlapQG.cpp" />
+    <ClCompile Include="GlobalConstant.cpp" />
+    <ClCompile Include="QueryExecutionOrder.cpp" />
+    <ClCompile Include="QueryGraphIsomorphismTest.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MQO.cpp" />
+    <ClCompile Include="PCMBuilder.cpp" />
+    <ClCompile Include="QuerySubgraphIsomorphismSearch.cpp" />
+    <ClCompile Include="RandomQG.cpp" />
+    <ClCompile Include="RdfMQO.cpp" />
+    <ClCompile Include="SimiMethodTest.cpp" />
+    <ClCompile Include="SQP.cpp" />
+    <ClCompile Include="TLSGraph.cpp" />
+    <ClCompile Include="TurboIso.cpp" />
+    <ClCompile Include="TurboIsoBoosted.cpp" />
+    <ClCompile Include="TurboIsoBoostedMQO.cpp" />
+    <ClCompile Include="TurboIsoMQO.cpp" />
+    <ClCompile Include="TurboIso_CacheResults.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CacheEmbeddingNode.h" />
+    <ClInclude Include="CacheRetrieval.h" />
+    <ClInclude Include="ComboLinkedLists.h" />
+    <ClInclude Include="CoreVertexSpanOverlapQG.h" />
+    <ClInclude Include="DebugGraphOverlapQG.h" />
+    <ClInclude Include="ExecutionOrderNode.h" />
+    <ClInclude Include="FindAllMaximalCliques.h" />
+    <ClInclude Include="FindAllMaximalCommonSubgraphs.h" />
+    <ClInclude Include="FindMaximumCommonSubgraph.h" />
+    <ClInclude Include="fptree.hpp" />
+    <ClInclude Include="FrequentPatternGroup.h" />
+    <ClInclude Include="GlobalConstant.h" />
+    <ClInclude Include="CacheResultsTest.h" />
+    <ClInclude Include="JointGraph.h" />
+    <ClInclude Include="JointNodeOrderNode.h" />
+    <ClInclude Include="OverlapQueryGenerator.h" />
+    <ClInclude Include="CoreSubgraphSpanOverlapQG.h" />
+    <ClInclude Include="PCM_Node.h" />
+    <ClInclude Include="QueryExecutionOrder.h" />
+    <ClInclude Include="QueryGraphIsomorphismTest.h" />
+    <ClInclude Include="MQO.h" />
+    <ClInclude Include="PCMBuilder.h" />
+    <ClInclude Include="QuerySubgraphIsomorphismSearch.h" />
+    <ClInclude Include="RandomQG.h" />
+    <ClInclude Include="RdfMQO.h" />
+    <ClInclude Include="SimiMethodTest.h" />
+    <ClInclude Include="SQP.h" />
+    <ClInclude Include="TLSGraph.h" />
+    <ClInclude Include="TurboIsoBoostedMQO.h" />
+    <ClInclude Include="TurboIso.h" />
+    <ClInclude Include="TurboIsoBoosted.h" />
+    <ClInclude Include="TurboIso_CacheResults.h" />
+    <ClInclude Include="TurboIsoMQO.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Resources\readMe.txt" />
+    <Text Include="..\Resources\result.txt" />
+    <Text Include="readMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\human.graph" />
+    <None Include="..\Resources\mqo_test_d.graph" />
+    <None Include="..\Resources\mqo_test_q.graph" />
+    <None Include="..\Resources\original_query_filtered.graph" />
+    <None Include="..\Resources\paper_data.graph" />
+    <None Include="..\Resources\paper_query.graph" />
+    <None Include="..\Resources\query_filtered.graph" />
+    <None Include="..\Resources\query_simi_6.graph" />
+    <None Include="..\Resources\yeast.graph" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

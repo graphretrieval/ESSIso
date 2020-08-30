@@ -1,0 +1,55 @@
+0.1
+Got 1000 query graph(s)
+Got 100 coldstart query graph(s)
+Found 90 results
+Found 100 results
+Found 100 results
+Found 100 results
+Timeout
+Found 0 results
+Found 100 results
+Timeout
+Found 0 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 6 results
+Found 72 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Timeout
+Found 0 results
+Found 100 results
+Found 54 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Found 100 results
+Timeout
+Found 0 results

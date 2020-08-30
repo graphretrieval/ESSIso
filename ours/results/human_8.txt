@@ -1,0 +1,4182 @@
+0.1
+Got 1000 query graph(s)
+Graph Index: 1
+Find from the beginning
+Found 100 results
+add query graph 1 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 2
+Find from the beginning
+Found 100 results
+add query graph 2 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 3
+Find from the beginning
+Found 100 results
+add query graph 3 to cache
+Running time: 24[ms]
+======================================
+Graph Index: 4
+Find from the beginning
+Found 100 results
+add query graph 4 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 5
+Find from the beginning
+Found 100 results
+add query graph 5 to cache
+Running time: 24[ms]
+======================================
+Graph Index: 6
+Find from the beginning
+Found 100 results
+add query graph 6 to cache
+Running time: 25[ms]
+======================================
+Graph Index: 7
+Find from the beginning
+Found 100 results
+add query graph 7 to cache
+Running time: 25[ms]
+======================================
+Graph Index: 8
+Find from the beginning
+Found 100 results
+add query graph 8 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 9
+Find from the beginning
+Found 100 results
+add query graph 9 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 10
+Find from the beginning
+Found 100 results
+add query graph 10 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 11
+Find from the beginning
+Found 100 results
+add query graph 11 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 12
+Find from the beginning
+Found 100 results
+add query graph 12 to cache
+Running time: 29[ms]
+======================================
+Graph Index: 13
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 14
+Find from the beginning
+Found 100 results
+add query graph 14 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 15
+Find from the beginning
+Found 100 results
+add query graph 15 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 16
+Find from the beginning
+Found 100 results
+add query graph 16 to cache
+Running time: 80[ms]
+======================================
+Graph Index: 17
+Find from the beginning
+Found 100 results
+add query graph 17 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 18
+Find from the beginning
+Found 100 results
+add query graph 18 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 19
+Find from the beginning
+Found 100 results
+add query graph 19 to cache
+Running time: 33[ms]
+======================================
+Graph Index: 20
+Find from the beginning
+Found 100 results
+add query graph 20 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 21
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 22
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 23
+Found case 3:16
+Running time: 0[ms]
+======================================
+Graph Index: 24
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 25
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 26
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 27
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 28
+Find from the beginning
+Timeout
+Found 0 results
+Running time: 312[ms]
+======================================
+Graph Index: 29
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 30
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 31
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 32
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 33
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 34
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 35
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 36
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 37
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 38
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 39
+Found case 3:8
+Running time: 0[ms]
+======================================
+Graph Index: 40
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 41
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 42
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 43
+Found case 3:20
+Running time: 0[ms]
+======================================
+Graph Index: 44
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 45
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 46
+Find from the beginning
+Found 100 results
+add query graph 46 to cache
+Running time: 30[ms]
+======================================
+Graph Index: 47
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 48
+Find from the beginning
+Found 100 results
+add query graph 48 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 49
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 50
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 51
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 52
+Find from the beginning
+Found 100 results
+add query graph 52 to cache
+Running time: 29[ms]
+======================================
+Graph Index: 53
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 54
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 55
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 56
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 57
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 58
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 59
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 60
+Found case 3:15
+Running time: 0[ms]
+======================================
+Graph Index: 61
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 62
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 63
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 64
+Found case 3:10
+Running time: 0[ms]
+======================================
+Graph Index: 65
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 66
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 67
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 68
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 69
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 70
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 71
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 72
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 73
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 74
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 75
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 76
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 77
+Found case 3:12
+Running time: 0[ms]
+======================================
+Graph Index: 78
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 79
+Found case 3:7
+Running time: 0[ms]
+======================================
+Graph Index: 80
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 81
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 82
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 83
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 84
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 85
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 86
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 87
+Found case 3:20
+Running time: 0[ms]
+======================================
+Graph Index: 88
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 89
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 90
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 91
+Find from the beginning
+Found 100 results
+add query graph 91 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 92
+Found case 3:18
+Running time: 0[ms]
+======================================
+Graph Index: 93
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 94
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 95
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 96
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 97
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 98
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 99
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 100
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 101
+Find from the beginning
+Found 100 results
+add query graph 101 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 102
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 103
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 104
+Found case 1:101
+Running time: 1[ms]
+======================================
+Graph Index: 105
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 106
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 107
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 108
+Found case 3:19
+Running time: 0[ms]
+======================================
+Graph Index: 109
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 110
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 111
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 112
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 113
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 114
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 115
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 116
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 117
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 118
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 119
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 120
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 121
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 122
+Find from the beginning
+Found 100 results
+add query graph 122 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 123
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 124
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 125
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 126
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 127
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 128
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 129
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 130
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 131
+Found case 3:18
+Running time: 0[ms]
+======================================
+Graph Index: 132
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 133
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 134
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 135
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 136
+Find from the beginning
+Found 100 results
+add query graph 136 to cache
+Running time: 30[ms]
+======================================
+Graph Index: 137
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 138
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 139
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 140
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 141
+Find from the beginning
+Found 100 results
+add query graph 141 to cache
+Running time: 30[ms]
+======================================
+Graph Index: 142
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 143
+Found case 3:2
+Running time: 0[ms]
+======================================
+Graph Index: 144
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 145
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 146
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 147
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 148
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 149
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 150
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 151
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 152
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 153
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 154
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 155
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 156
+Find from the beginning
+Found 100 results
+add query graph 156 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 157
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 158
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 159
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 160
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 161
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 162
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 163
+Found case 3:2
+Running time: 0[ms]
+======================================
+Graph Index: 164
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 165
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 166
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 167
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 168
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 169
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 170
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 171
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 172
+Find from the beginning
+Found 100 results
+add query graph 172 to cache
+Running time: 31[ms]
+======================================
+Graph Index: 173
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 174
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 175
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 176
+Find from the beginning
+Found 100 results
+add query graph 176 to cache
+Running time: 29[ms]
+======================================
+Graph Index: 177
+Found case 3:17
+Running time: 0[ms]
+======================================
+Graph Index: 178
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 179
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 180
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 181
+Found case 3:14
+Running time: 0[ms]
+======================================
+Graph Index: 182
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 183
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 184
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 185
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 186
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 187
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 188
+Found case 3:14
+Running time: 0[ms]
+======================================
+Graph Index: 189
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 190
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 191
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 192
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 193
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 194
+Timeout
+Find from the beginning
+Found 100 results
+add query graph 194 to cache
+Running time: 31[ms]
+======================================
+Graph Index: 195
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 196
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 197
+Find from the beginning
+Found 100 results
+add query graph 197 to cache
+Running time: 79[ms]
+======================================
+Graph Index: 198
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 199
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 200
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 201
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 202
+Found case 3:3
+Running time: 0[ms]
+======================================
+Graph Index: 203
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 204
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 205
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 206
+Find from the beginning
+Found 100 results
+add query graph 206 to cache
+Running time: 29[ms]
+======================================
+Graph Index: 207
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 208
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 209
+Find from the beginning
+Found 100 results
+add query graph 209 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 210
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 211
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 212
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 213
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 214
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 215
+Found case 3:206
+Running time: 0[ms]
+======================================
+Graph Index: 216
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 217
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 218
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 219
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 220
+Find from the beginning
+Found 100 results
+add query graph 220 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 221
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 222
+Found case 3:14
+Running time: 0[ms]
+======================================
+Graph Index: 223
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 224
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 225
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 226
+Found case 3:8
+Running time: 0[ms]
+======================================
+Graph Index: 227
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 228
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 229
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 230
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 231
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 232
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 233
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 234
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 235
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 236
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 237
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 238
+Find from the beginning
+Found 100 results
+add query graph 238 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 239
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 240
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 241
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 242
+Found case 3:5
+Running time: 0[ms]
+======================================
+Graph Index: 243
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 244
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 245
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 246
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 247
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 248
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 249
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 250
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 251
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 252
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 253
+Found case 1:141
+Running time: 0[ms]
+======================================
+Graph Index: 254
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 255
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 256
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 257
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 258
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 259
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 260
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 261
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 262
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 263
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 264
+Find from the beginning
+Found 100 results
+add query graph 264 to cache
+Running time: 78[ms]
+======================================
+Graph Index: 265
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 266
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 267
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 268
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 269
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 270
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 271
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 272
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 273
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 274
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 275
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 276
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 277
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 278
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 279
+Find from the beginning
+Found 100 results
+add query graph 279 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 280
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 281
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 282
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 283
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 284
+Find from the beginning
+Found 100 results
+add query graph 284 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 285
+Find from the beginning
+Found 100 results
+add query graph 285 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 286
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 287
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 288
+Found case 3:9
+Running time: 0[ms]
+======================================
+Graph Index: 289
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 290
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 291
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 292
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 293
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 294
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 295
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 296
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 297
+Found case 3:14
+Running time: 0[ms]
+======================================
+Graph Index: 298
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 299
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 300
+Found case 1:172
+Running time: 1[ms]
+======================================
+Graph Index: 301
+Found case 1:279
+Running time: 1[ms]
+======================================
+Graph Index: 302
+Found case 1:17
+Running time: 1[ms]
+======================================
+Graph Index: 303
+Found case 1:141
+Running time: 1[ms]
+======================================
+Graph Index: 304
+Timeout
+Timeout
+Timeout
+Find from the beginning
+Found 100 results
+add query graph 304 to cache
+Running time: 43[ms]
+======================================
+Graph Index: 305
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 306
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 307
+Find from the beginning
+Found 100 results
+add query graph 307 to cache
+Running time: 25[ms]
+======================================
+Graph Index: 308
+Found case 3:2
+Running time: 0[ms]
+======================================
+Graph Index: 309
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 310
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 311
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 312
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 313
+Found case 3:19
+Running time: 0[ms]
+======================================
+Graph Index: 314
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 315
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 316
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 317
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 318
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 319
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 320
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 321
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 322
+Found case 3:15
+Running time: 0[ms]
+======================================
+Graph Index: 323
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 324
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 325
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 326
+Find from the beginning
+Found 100 results
+add query graph 326 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 327
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 328
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 329
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 330
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 331
+Found case 3:15
+Running time: 0[ms]
+======================================
+Graph Index: 332
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 333
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 334
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 335
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 336
+Found case 1:326
+Running time: 0[ms]
+======================================
+Graph Index: 337
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 338
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 339
+Find from the beginning
+Found 100 results
+add query graph 339 to cache
+Running time: 29[ms]
+======================================
+Graph Index: 340
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 341
+Found case 3:5
+Running time: 0[ms]
+======================================
+Graph Index: 342
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 343
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 344
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 345
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 346
+Find from the beginning
+Found 100 results
+add query graph 346 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 347
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 348
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 349
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 350
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 351
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 352
+Find from the beginning
+Found 100 results
+add query graph 352 to cache
+Running time: 33[ms]
+======================================
+Graph Index: 353
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 354
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 355
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 356
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 357
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 358
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 359
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 360
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 361
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 362
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 363
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 364
+Found case 1:194
+Running time: 0[ms]
+======================================
+Graph Index: 365
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 366
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 367
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 368
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 369
+Found case 3:12
+Running time: 0[ms]
+======================================
+Graph Index: 370
+Found case 3:10
+Running time: 0[ms]
+======================================
+Graph Index: 371
+Found case 3:5
+Running time: 0[ms]
+======================================
+Graph Index: 372
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 373
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 374
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 375
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 376
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 377
+Found case 3:8
+Running time: 0[ms]
+======================================
+Graph Index: 378
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 379
+Find from the beginning
+Found 100 results
+add query graph 379 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 380
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 381
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 382
+Found case 3:5
+Running time: 0[ms]
+======================================
+Graph Index: 383
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 384
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 385
+Found case 3:1
+Running time: 0[ms]
+======================================
+Graph Index: 386
+Found case 3:1
+Running time: 0[ms]
+======================================
+Graph Index: 387
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 388
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 389
+Found case 3:15
+Running time: 0[ms]
+======================================
+Graph Index: 390
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 391
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 392
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 393
+Found case 3:5
+Running time: 0[ms]
+======================================
+Graph Index: 394
+Find from the beginning
+Found 100 results
+add query graph 394 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 395
+Timeout
+Find from the beginning
+Found 100 results
+add query graph 395 to cache
+Running time: 30[ms]
+======================================
+Graph Index: 396
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 397
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 398
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 399
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 400
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 401
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 402
+Found case 3:15
+Running time: 0[ms]
+======================================
+Graph Index: 403
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 404
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 405
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 406
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 407
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 408
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 409
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 410
+Found case 3:209
+Running time: 0[ms]
+======================================
+Graph Index: 411
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 412
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 413
+Find from the beginning
+Found 100 results
+add query graph 413 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 414
+Found case 3:20
+Running time: 0[ms]
+======================================
+Graph Index: 415
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 416
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 417
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 418
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 419
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 420
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 421
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 422
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 423
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 424
+Found case 3:17
+Running time: 0[ms]
+======================================
+Graph Index: 425
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 426
+Timeout
+Timeout
+Timeout
+Find from the beginning
+Found 100 results
+add query graph 426 to cache
+Running time: 50[ms]
+======================================
+Graph Index: 427
+Find from the beginning
+Found 100 results
+add query graph 427 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 428
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 429
+Found case 3:17
+Running time: 0[ms]
+======================================
+Graph Index: 430
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 431
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 432
+Found case 3:8
+Running time: 0[ms]
+======================================
+Graph Index: 433
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 434
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 435
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 436
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 437
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 438
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 439
+Found case 1:16
+Running time: 1[ms]
+======================================
+Graph Index: 440
+Found case 1:11
+Running time: 1[ms]
+======================================
+Graph Index: 441
+Found case 1:11
+Running time: 1[ms]
+======================================
+Graph Index: 442
+Found case 1:4
+Running time: 1[ms]
+======================================
+Graph Index: 443
+Found case 1:18
+Running time: 1[ms]
+======================================
+Graph Index: 444
+Timeout
+Found case 3:339
+Running time: 2[ms]
+======================================
+Graph Index: 445
+Found case 1:14
+Running time: 1[ms]
+======================================
+Graph Index: 446
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 447
+Found case 1:2
+Running time: 1[ms]
+======================================
+Graph Index: 448
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 449
+Found case 1:11
+Running time: 1[ms]
+======================================
+Graph Index: 450
+Found case 1:10
+Running time: 1[ms]
+======================================
+Graph Index: 451
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 452
+Found case 1:11
+Running time: 1[ms]
+======================================
+Graph Index: 453
+Found case 1:8
+Running time: 1[ms]
+======================================
+Graph Index: 454
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 455
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 456
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 457
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 458
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 459
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 460
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 461
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 462
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 463
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 464
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 465
+Found case 3:279
+Running time: 0[ms]
+======================================
+Graph Index: 466
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 467
+Found case 1:172
+Running time: 0[ms]
+======================================
+Graph Index: 468
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 469
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 470
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 471
+Find from the beginning
+Found 100 results
+add query graph 471 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 472
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 473
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 474
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 475
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 476
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 477
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 478
+Found case 3:209
+Running time: 0[ms]
+======================================
+Graph Index: 479
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 480
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 481
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 482
+Found case 1:352
+Running time: 0[ms]
+======================================
+Graph Index: 483
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 484
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 485
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 486
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 487
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 488
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 489
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 490
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 491
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 492
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 493
+Found case 1:326
+Running time: 0[ms]
+======================================
+Graph Index: 494
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 495
+Find from the beginning
+Found 100 results
+add query graph 495 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 496
+Find from the beginning
+Found 100 results
+add query graph 496 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 497
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 498
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 499
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 500
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 501
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 502
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 503
+Found case 3:7
+Running time: 0[ms]
+======================================
+Graph Index: 504
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 505
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 506
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 507
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 508
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 509
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 510
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 511
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 512
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 513
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 514
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 515
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 516
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 517
+Find from the beginning
+Found 100 results
+add query graph 517 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 518
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 519
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 520
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 521
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 522
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 523
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 524
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 525
+Find from the beginning
+Found 100 results
+add query graph 525 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 526
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 527
+Found case 3:197
+Running time: 0[ms]
+======================================
+Graph Index: 528
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 529
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 530
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 531
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 532
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 533
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 534
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 535
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 536
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 537
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 538
+Find from the beginning
+Found 100 results
+add query graph 538 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 539
+Find from the beginning
+Found 100 results
+add query graph 539 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 540
+Find from the beginning
+Found 100 results
+add query graph 540 to cache
+Running time: 30[ms]
+======================================
+Graph Index: 541
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 542
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 543
+Found case 3:10
+Running time: 0[ms]
+======================================
+Graph Index: 544
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 545
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 546
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 547
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 548
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 549
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 550
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 551
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 552
+Found case 3:1
+Running time: 0[ms]
+======================================
+Graph Index: 553
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 554
+Found case 1:517
+Running time: 0[ms]
+======================================
+Graph Index: 555
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 556
+Found case 3:18
+Running time: 0[ms]
+======================================
+Graph Index: 557
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 558
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 559
+Found case 3:18
+Running time: 0[ms]
+======================================
+Graph Index: 560
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 561
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 562
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 563
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 564
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 565
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 566
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 567
+Find from the beginning
+Found 100 results
+add query graph 567 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 568
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 569
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 570
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 571
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 572
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 573
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 574
+Timeout
+Find from the beginning
+Found 100 results
+add query graph 574 to cache
+Running time: 48[ms]
+======================================
+Graph Index: 575
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 576
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 577
+Found case 3:471
+Running time: 0[ms]
+======================================
+Graph Index: 578
+Found case 1:122
+Running time: 0[ms]
+======================================
+Graph Index: 579
+Find from the beginning
+Found 100 results
+add query graph 579 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 580
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 581
+Found case 3:339
+Running time: 0[ms]
+======================================
+Graph Index: 582
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 583
+Find from the beginning
+Found 100 results
+add query graph 583 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 584
+Found case 3:206
+Running time: 0[ms]
+======================================
+Graph Index: 585
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 586
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 587
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 588
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 589
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 590
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 591
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 592
+Found case 3:279
+Running time: 0[ms]
+======================================
+Graph Index: 593
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 594
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 595
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 596
+Found case 3:238
+Running time: 0[ms]
+======================================
+Graph Index: 597
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 598
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 599
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 600
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 601
+Found case 1:539
+Running time: 0[ms]
+======================================
+Graph Index: 602
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 603
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 604
+Found case 3:539
+Running time: 0[ms]
+======================================
+Graph Index: 605
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 606
+Found case 3:539
+Running time: 0[ms]
+======================================
+Graph Index: 607
+Found case 3:1
+Running time: 0[ms]
+======================================
+Graph Index: 608
+Found case 1:326
+Running time: 0[ms]
+======================================
+Graph Index: 609
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 610
+Found case 1:352
+Running time: 0[ms]
+======================================
+Graph Index: 611
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 612
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 613
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 614
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 615
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 616
+Find from the beginning
+Found 100 results
+add query graph 616 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 617
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 618
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 619
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 620
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 621
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 622
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 623
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 624
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 625
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 626
+Found case 1:91
+Running time: 0[ms]
+======================================
+Graph Index: 627
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 628
+Found case 1:156
+Running time: 0[ms]
+======================================
+Graph Index: 629
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 630
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 631
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 632
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 633
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 634
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 635
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 636
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 637
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 638
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 639
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 640
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 641
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 642
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 643
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 644
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 645
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 646
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 647
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 648
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 649
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 650
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 651
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 652
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 653
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 654
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 655
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 656
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 657
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 658
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 659
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 660
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 661
+Found case 3:18
+Running time: 0[ms]
+======================================
+Graph Index: 662
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 663
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 664
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 665
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 666
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 667
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 668
+Found case 1:141
+Running time: 0[ms]
+======================================
+Graph Index: 669
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 670
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 671
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 672
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 673
+Found case 3:517
+Running time: 0[ms]
+======================================
+Graph Index: 674
+Find from the beginning
+Found 100 results
+add query graph 674 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 675
+Find from the beginning
+Found 100 results
+add query graph 675 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 676
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 677
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 678
+Found case 1:675
+Running time: 0[ms]
+======================================
+Graph Index: 679
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 680
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 681
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 682
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 683
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 684
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 685
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 686
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 687
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 688
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 689
+Found case 3:14
+Running time: 0[ms]
+======================================
+Graph Index: 690
+Found case 3:6
+Running time: 0[ms]
+======================================
+Graph Index: 691
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 692
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 693
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 694
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 695
+Found case 3:238
+Running time: 0[ms]
+======================================
+Graph Index: 696
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 697
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 698
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 699
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 700
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 701
+Found case 1:352
+Running time: 0[ms]
+======================================
+Graph Index: 702
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 703
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 704
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 705
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 706
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 707
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 708
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 709
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 710
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 711
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 712
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 713
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 714
+Find from the beginning
+Found 100 results
+add query graph 714 to cache
+Running time: 81[ms]
+======================================
+Graph Index: 715
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 716
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 717
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 718
+Find from the beginning
+Found 100 results
+add query graph 718 to cache
+Running time: 28[ms]
+======================================
+Graph Index: 719
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 720
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 721
+Found case 1:194
+Running time: 0[ms]
+======================================
+Graph Index: 722
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 723
+Found case 1:220
+Running time: 0[ms]
+======================================
+Graph Index: 724
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 725
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 726
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 727
+Find from the beginning
+Found 100 results
+add query graph 727 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 728
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 729
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 730
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 731
+Found case 3:284
+Running time: 0[ms]
+======================================
+Graph Index: 732
+Found case 3:16
+Running time: 0[ms]
+======================================
+Graph Index: 733
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 734
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 735
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 736
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 737
+Found case 1:579
+Running time: 0[ms]
+======================================
+Graph Index: 738
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 739
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 740
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 741
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 742
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 743
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 744
+Found case 3:279
+Running time: 0[ms]
+======================================
+Graph Index: 745
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 746
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 747
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 748
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 749
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 750
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 751
+Found case 1:136
+Running time: 0[ms]
+======================================
+Graph Index: 752
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 753
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 754
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 755
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 756
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 757
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 758
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 759
+Find from the beginning
+Found 100 results
+add query graph 759 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 760
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 761
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 762
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 763
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 764
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 765
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 766
+Found case 1:517
+Running time: 0[ms]
+======================================
+Graph Index: 767
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 768
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 769
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 770
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 771
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 772
+Found case 3:10
+Running time: 0[ms]
+======================================
+Graph Index: 773
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 774
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 775
+Found case 3:20
+Running time: 0[ms]
+======================================
+Graph Index: 776
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 777
+Found case 1:540
+Running time: 0[ms]
+======================================
+Graph Index: 778
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 779
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 780
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 781
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 782
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 783
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 784
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 785
+Found case 1:540
+Running time: 0[ms]
+======================================
+Graph Index: 786
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 787
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 788
+Found case 1:352
+Running time: 0[ms]
+======================================
+Graph Index: 789
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 790
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 791
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 792
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 793
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 794
+Found case 3:284
+Running time: 0[ms]
+======================================
+Graph Index: 795
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 796
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 797
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 798
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 799
+Found case 1:517
+Running time: 0[ms]
+======================================
+Graph Index: 800
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 801
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 802
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 803
+Found case 1:101
+Running time: 1[ms]
+======================================
+Graph Index: 804
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 805
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 806
+Found case 3:10
+Running time: 0[ms]
+======================================
+Graph Index: 807
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 808
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 809
+Find from the beginning
+Found 100 results
+add query graph 809 to cache
+Running time: 48[ms]
+======================================
+Graph Index: 810
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 811
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 812
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 813
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 814
+Found case 3:20
+Running time: 0[ms]
+======================================
+Graph Index: 815
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 816
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 817
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 818
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 819
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 820
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 821
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 822
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 823
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 824
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 825
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 826
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 827
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 828
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 829
+Found case 3:20
+Running time: 0[ms]
+======================================
+Graph Index: 830
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 831
+Found case 1:718
+Running time: 0[ms]
+======================================
+Graph Index: 832
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 833
+Found case 1:5
+Running time: 1[ms]
+======================================
+Graph Index: 834
+Found case 1:19
+Running time: 1[ms]
+======================================
+Graph Index: 835
+Found case 1:10
+Running time: 1[ms]
+======================================
+Graph Index: 836
+Found case 1:15
+Running time: 1[ms]
+======================================
+Graph Index: 837
+Found case 1:14
+Running time: 1[ms]
+======================================
+Graph Index: 838
+Found case 1:12
+Running time: 1[ms]
+======================================
+Graph Index: 839
+Found case 1:6
+Running time: 1[ms]
+======================================
+Graph Index: 840
+Found case 1:11
+Running time: 1[ms]
+======================================
+Graph Index: 841
+Find from the beginning
+Found 100 results
+add query graph 841 to cache
+Running time: 38[ms]
+======================================
+Graph Index: 842
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 843
+Found case 3:579
+Running time: 0[ms]
+======================================
+Graph Index: 844
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 845
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 846
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 847
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 848
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 849
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 850
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 851
+Find from the beginning
+Found 100 results
+add query graph 851 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 852
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 853
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 854
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 855
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 856
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 857
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 858
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 859
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 860
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 861
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 862
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 863
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 864
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 865
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 866
+Found case 1:206
+Running time: 0[ms]
+======================================
+Graph Index: 867
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 868
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 869
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 870
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 871
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 872
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 873
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 874
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 875
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 876
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 877
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 878
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 879
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 880
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 881
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 882
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 883
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 884
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 885
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 886
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 887
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 888
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 889
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 890
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 891
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 892
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 893
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 894
+Found case 1:339
+Running time: 0[ms]
+======================================
+Graph Index: 895
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 896
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 897
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 898
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 899
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 900
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 901
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 902
+Find from the beginning
+Found 100 results
+add query graph 902 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 903
+Find from the beginning
+Found 100 results
+add query graph 903 to cache
+Running time: 27[ms]
+======================================
+Graph Index: 904
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 905
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 906
+Found case 3:238
+Running time: 0[ms]
+======================================
+Graph Index: 907
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 908
+Found case 3:9
+Running time: 0[ms]
+======================================
+Graph Index: 909
+Found case 3:675
+Running time: 0[ms]
+======================================
+Graph Index: 910
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 911
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 912
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 913
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 914
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 915
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 916
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 917
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 918
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 919
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 920
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 921
+Find from the beginning
+Found 100 results
+add query graph 921 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 922
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 923
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 924
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 925
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 926
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 927
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 928
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 929
+Found case 3:19
+Running time: 0[ms]
+======================================
+Graph Index: 930
+Found case 3:352
+Running time: 0[ms]
+======================================
+Graph Index: 931
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 932
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 933
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 934
+Found case 3:209
+Running time: 0[ms]
+======================================
+Graph Index: 935
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 936
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 937
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 938
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 939
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 940
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 941
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 942
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 943
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 944
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 945
+Found case 1:5
+Running time: 0[ms]
+======================================
+Graph Index: 946
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 947
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 948
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 949
+Found case 1:141
+Running time: 0[ms]
+======================================
+Graph Index: 950
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 951
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 952
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 953
+Found case 3:4
+Running time: 0[ms]
+======================================
+Graph Index: 954
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 955
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 956
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 957
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 958
+Found case 3:220
+Running time: 0[ms]
+======================================
+Graph Index: 959
+Found case 1:8
+Running time: 0[ms]
+======================================
+Graph Index: 960
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 961
+Find from the beginning
+Found 100 results
+add query graph 961 to cache
+Running time: 48[ms]
+======================================
+Graph Index: 962
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 963
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 964
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 965
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 966
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 967
+Found case 1:11
+Running time: 0[ms]
+======================================
+Graph Index: 968
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 969
+Found case 1:279
+Running time: 0[ms]
+======================================
+Graph Index: 970
+Found case 1:18
+Running time: 0[ms]
+======================================
+Graph Index: 971
+Found case 1:15
+Running time: 0[ms]
+======================================
+Graph Index: 972
+Found case 1:14
+Running time: 0[ms]
+======================================
+Graph Index: 973
+Found case 1:538
+Running time: 0[ms]
+======================================
+Graph Index: 974
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 975
+Found case 1:156
+Running time: 0[ms]
+======================================
+Graph Index: 976
+Find from the beginning
+Found 100 results
+add query graph 976 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 977
+Found case 1:9
+Running time: 0[ms]
+======================================
+Graph Index: 978
+Found case 1:3
+Running time: 0[ms]
+======================================
+Graph Index: 979
+Found case 1:20
+Running time: 0[ms]
+======================================
+Graph Index: 980
+Find from the beginning
+Found 100 results
+add query graph 980 to cache
+Running time: 26[ms]
+======================================
+Graph Index: 981
+Found case 1:902
+Running time: 0[ms]
+======================================
+Graph Index: 982
+Found case 1:19
+Running time: 0[ms]
+======================================
+Graph Index: 983
+Found case 1:17
+Running time: 0[ms]
+======================================
+Graph Index: 984
+Found case 1:16
+Running time: 0[ms]
+======================================
+Graph Index: 985
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 986
+Found case 1:1
+Running time: 0[ms]
+======================================
+Graph Index: 987
+Found case 3:238
+Running time: 0[ms]
+======================================
+Graph Index: 988
+Found case 3:7
+Running time: 0[ms]
+======================================
+Graph Index: 989
+Found case 1:7
+Running time: 0[ms]
+======================================
+Graph Index: 990
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 991
+Found case 1:10
+Running time: 0[ms]
+======================================
+Graph Index: 992
+Found case 1:2
+Running time: 0[ms]
+======================================
+Graph Index: 993
+Found case 1:6
+Running time: 0[ms]
+======================================
+Graph Index: 994
+Found case 1:352
+Running time: 0[ms]
+======================================
+Graph Index: 995
+Found case 1:961
+Running time: 0[ms]
+======================================
+Graph Index: 996
+Found case 1:4
+Running time: 0[ms]
+======================================
+Graph Index: 997
+Found case 3:220
+Running time: 1[ms]
+======================================
+Graph Index: 998
+Find from the beginning
+Found 100 results
+add query graph 998 to cache
+Running time: 49[ms]
+======================================
+Graph Index: 999
+Found case 1:12
+Running time: 0[ms]
+======================================
+Graph Index: 1000
+Found case 1:15
+Running time: 0[ms]
+======================================
+Total build time: 8349.79
+Total scan time: 42
+Total overhead time: 422.59
+Total running time: 2890
+Number of found: 999 99900
+Hit: 918

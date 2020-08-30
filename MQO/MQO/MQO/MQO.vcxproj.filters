@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PCMBuilder.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="TLSGraph.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="ComboLinkedLists.cpp">
+      <Filter>Source Files\CacheResult</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAllMaximalCliques.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="TurboIsoBoosted.cpp">
+      <Filter>Source Files\SubgraphIsomorphism</Filter>
+    </ClCompile>
+    <ClCompile Include="TurboIso.cpp">
+      <Filter>Source Files\SubgraphIsomorphism</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryGraphIsomorphismTest.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="QuerySubgraphIsomorphismSearch.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="main_debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MQO.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="SQP.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalConstant.cpp">
+      <Filter>Source Files\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlapQueryGenerator.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomQG.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreVertexSpanOverlapQG.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreSubgraphSpanOverlapQG.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheResultsTest.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="TurboIso_CacheResults.cpp">
+      <Filter>Source Files\SubgraphIsomorphism</Filter>
+    </ClCompile>
+    <ClCompile Include="fptree.cpp">
+      <Filter>BackUp</Filter>
+    </ClCompile>
+    <ClCompile Include="FrequentPatternGroup.cpp">
+      <Filter>BackUp</Filter>
+    </ClCompile>
+    <ClCompile Include="RdfMQO.cpp">
+      <Filter>BackUp</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugGraphOverlapQG.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="SimiMethodTest.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMaximumCommonSubgraph.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryExecutionOrder.cpp">
+      <Filter>Source Files\QueryExecutionOrder</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheRetrieval.cpp">
+      <Filter>Source Files\CacheResult</Filter>
+    </ClCompile>
+    <ClCompile Include="TurboIsoBoostedMQO.cpp">
+      <Filter>Source Files\SubgraphIsomorphism</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAllMaximalCommonSubgraphs.cpp">
+      <Filter>Source Files\PCMBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="TurboIsoMQO.cpp">
+      <Filter>Source Files\SubgraphIsomorphism</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TLSGraph.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="PCMBuilder.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="ComboLinkedLists.h">
+      <Filter>Header Files\CacheResult</Filter>
+    </ClInclude>
+    <ClInclude Include="FindAllMaximalCliques.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryGraphIsomorphismTest.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="QuerySubgraphIsomorphismSearch.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="TurboIsoBoosted.h">
+      <Filter>Header Files\SubgraphIsomorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="TurboIso.h">
+      <Filter>Header Files\SubgraphIsomorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="MQO.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="SQP.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalConstant.h">
+      <Filter>Header Files\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlapQueryGenerator.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomQG.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreVertexSpanOverlapQG.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreSubgraphSpanOverlapQG.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheResultsTest.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="TurboIso_CacheResults.h">
+      <Filter>Header Files\SubgraphIsomorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="fptree.hpp">
+      <Filter>BackUp</Filter>
+    </ClInclude>
+    <ClInclude Include="FrequentPatternGroup.h">
+      <Filter>BackUp</Filter>
+    </ClInclude>
+    <ClInclude Include="RdfMQO.h">
+      <Filter>BackUp</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugGraphOverlapQG.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="SimiMethodTest.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="FindMaximumCommonSubgraph.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryExecutionOrder.h">
+      <Filter>Header Files\QueryExecutionOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="PCM_Node.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="ExecutionOrderNode.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="JointGraph.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="TurboIsoMQO.h">
+      <Filter>Header Files\SubgraphIsomorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheEmbeddingNode.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheRetrieval.h">
+      <Filter>Header Files\CacheResult</Filter>
+    </ClInclude>
+    <ClInclude Include="TurboIsoBoostedMQO.h">
+      <Filter>Header Files\SubgraphIsomorphism</Filter>
+    </ClInclude>
+    <ClInclude Include="JointNodeOrderNode.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="FindAllMaximalCommonSubgraphs.h">
+      <Filter>Header Files\PCMBuilder</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1dea7ad0-5bbb-450a-8e21-c095ed254495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1bc14f4f-ad99-4b9a-9b92-a4a418d6cbd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SubgraphIsomorphism">
+      <UniqueIdentifier>{c8a6d37a-5bac-464d-a5c1-11521d747fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SubgraphIsomorphism">
+      <UniqueIdentifier>{c5066566-57fc-432d-811c-e524999a213c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PCMBuilder">
+      <UniqueIdentifier>{3add8102-11bf-45dc-a93d-f97fbb8bdd2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PCMBuilder">
+      <UniqueIdentifier>{52cff45d-ad51-4783-a3c1-9179529d2236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{59356072-6a3c-4697-945b-90585bb6ddff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{7c2f44eb-491e-47a8-8ad6-b1e6b36af22e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Test">
+      <UniqueIdentifier>{e2a2cf85-2eed-475c-b809-7db3ac414fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Test">
+      <UniqueIdentifier>{eb5ba711-ea45-475b-ac9e-fc98c8212429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Config">
+      <UniqueIdentifier>{e7f3fb74-85f3-435e-9b65-5224a060d471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Config">
+      <UniqueIdentifier>{786d0e22-8961-4910-817d-28e28d47b288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BackUp">
+      <UniqueIdentifier>{5b1e8610-0cff-4085-bd83-1def8ff7327d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QueryExecutionOrder">
+      <UniqueIdentifier>{2f971c33-852c-4e97-b3e5-f026ab2bb246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QueryExecutionOrder">
+      <UniqueIdentifier>{b53ed969-08dd-4b9a-8225-226433d39989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity">
+      <UniqueIdentifier>{4dacfeba-a680-445e-8ed7-84aa5622684c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CacheResult">
+      <UniqueIdentifier>{576fbea8-83e2-4eb4-ab5f-d8fc2228b2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CacheResult">
+      <UniqueIdentifier>{89384dfc-e8d8-43d0-bbb1-97f2a4c8d0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{237660fb-da64-4306-99fe-e8491f93a725}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readMe.txt">
+      <Filter>BackUp</Filter>
+    </Text>
+    <Text Include="..\Resources\readMe.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="..\Resources\result.txt">
+      <Filter>Resources</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\human.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\mqo_test_d.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\mqo_test_q.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\original_query_filtered.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\paper_data.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\paper_query.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\query_filtered.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\query_simi_6.graph">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\Resources\yeast.graph">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>

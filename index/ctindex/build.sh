@@ -1,0 +1,1 @@
+g++ -std=c++14 -pthread ctindex.cpp Graph.*pp -o emb -O3
