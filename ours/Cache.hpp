@@ -14,11 +14,14 @@ public:
     int maxCacheSize = 1000;
     bool isLRU = false;
     bool isLFU = false;
+    bool distance = false;
     int nextIndexToEvicted = -1;
     float minUtility = 0;
+    int _k;
     std::unordered_map<int, float> tempUtilities;
     std::unordered_map<int, float> utilities;
-std::unordered_map<int, Graph> cachedGraphs;
+    std::unordered_map<int, float> distanceUtilities;
+    std::unordered_map<int, Graph> cachedGraphs;
 private:
     struct Node *root = NULL; 
     // std::unordered_map<int, Graph> cachedGraphs;
@@ -33,7 +36,7 @@ public:
     void scanCache(Graph queryGraph, int *bestIndex, float* minDistance, std::unordered_map<int, float>* distanceMap);
     void insertNode(int index, std::vector<float> point);
     void deleteNode(int index, std::vector<float> point);
-
+    void printCache();
 public:
     void updateCacheHit(int index, float s, int matchIndex);
     std::unordered_map<int, Graph> getCacheGraphs();
@@ -46,7 +49,7 @@ public:
 public:
     Cache(/* args */);
     Cache(int size);
-    Cache(int size, bool isLRU, bool isLFU);
+    Cache(int size, bool isLRU, bool isLFU, bool distance, int k);
     ~Cache();
 };
 

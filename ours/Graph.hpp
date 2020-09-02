@@ -14,6 +14,7 @@ class Graph {
 public:
     int n;
     int vectorSize;
+    int familyIndex;
     // std::vector<std::vector<unsigned int>> adjmat;
     std::vector<std::set<int>> adjList;
     std::vector<std::set<int>> nonadjList;

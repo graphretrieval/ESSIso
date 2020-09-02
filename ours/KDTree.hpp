@@ -184,11 +184,14 @@ void kNearestSearchRec(Node* root, std::vector<float> point, unsigned depth, std
     unsigned cd = depth % root->point.size(); 
 	float dx = root->point[cd] - point[cd];
 	float dx2 = dx*dx;
+	// std::cout << "Consider " << root->index <<":";
 	if (distanceQueue->size() < k) {
 		distanceQueue->push({dist, root->index});
+		// std::cout << "Push " << dist << "," << root->index <<std::endl;
 	} else if (dist < distanceQueue->top().first) {
 		distanceQueue->pop();
 		distanceQueue->push({dist, root->index});
+		// std::cout << "Push " << dist << "( <" << distanceQueue->top().first << ")" << "," << root->index <<std::endl;
 	}
 	
     // Compare point with root with respect to cd (Current dimension) 
@@ -199,8 +202,7 @@ void kNearestSearchRec(Node* root, std::vector<float> point, unsigned depth, std
 		kNearestSearchRec(root->right, point, depth + 1, distanceQueue, distanceMap, k); 
 	}
 		
-	if (dx2 >= distanceQueue->top().first) return;
-
+	if (dx2 >= distanceQueue->top().first && distanceQueue->size() >= k) return;
     if (dx>0) {
 		kNearestSearchRec(root->right, point, depth + 1, distanceQueue, distanceMap, k);
 	}

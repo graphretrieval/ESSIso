@@ -1,0 +1,1 @@
+for ((i=0;i<=19;i++));  do echo $i;./out -t 0.1 -e 100 -c -s 100 -h -k 1 ../data/yeast_nnode10_fam50_rate10_case20_len1000/d.dimas ../data/yeast_nnode10_fam50_rate10_case20_len1000/query$i/ ; done

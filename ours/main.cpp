@@ -235,7 +235,8 @@ int main(int argc, char** argv) {
     double overHeadTime = 0;
     double totalScanTime = 0;
     double totalComparation = 0;
-    Cache graphCache = Cache(arguments.cache_size, arguments.lru, arguments.lfu);
+    Cache graphCache = Cache(arguments.cache_size, arguments.lru, arguments.lfu, arguments.distance, arguments.k);
+    std::cout << graphCache.distance << " " << arguments.distance <<  std::endl;
     int graphIndex = 0;
 
     for (Graph queryGraph : coldstartGraphVector) {
@@ -272,7 +273,7 @@ int main(int argc, char** argv) {
 
     for (Graph queryGraph : queryGraphVector) {
         graphIndex++;
-        std::cout << "Graph Index: " << graphIndex << std::endl;
+        std::cout << "Graph Index: " << graphIndex << ":" << queryGraph.familyIndex <<  std::endl;
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
         if (arguments.useCache) {
             int cachedGraphIndexCase1 = -1;
@@ -305,14 +306,14 @@ int main(int argc, char** argv) {
                     int currIndex = S.top();
                     S.pop();
                     bestElem = graphCache.getGraphById(currIndex);
-        
+                    std::cout << bestElem->familyIndex << " ";
                     std::map<int,int> tempMapNode;
                     bool timedout = false;
                     std::vector<std::map<int,int>> tempResults;
 
                     if (queryGraph.n <= bestElem->n) {
                         try {
-                            subGraphSlover.timeOut = 0.0001;
+                            subGraphSlover.timeOut = 0.1;
                             // subGraphSlover.getAllSubGraphs(queryGraph, elem.second, 0, 1);
                             subGraphSlover.getAllSubGraphs(*bestElem,queryGraph, 0, 1);
                         }
@@ -338,7 +339,7 @@ int main(int argc, char** argv) {
                     } 
                     else if (arguments.case2) {
                         try {
-                            subGraphSlover.timeOut = 0.0001;
+                            subGraphSlover.timeOut = 0.1;
                             subGraphSlover.getAllSubGraphs(queryGraph, *bestElem, 0, 1);
                             // subGraphSlover.getAllSubGraphs(*bestElem,queryGraph, 0, 1);
                         }
@@ -357,6 +358,7 @@ int main(int argc, char** argv) {
                         } 
                     }
                 }   
+                std::cout << std::endl;
             }
             totalScanTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000.0;
             bool useCache = false;
@@ -416,9 +418,16 @@ int main(int argc, char** argv) {
                             graphCache.insert(queryGraph, resultsGraph, t, graphIndex, distanceMap); 
                         } else {
                             t = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000000.0;
-                            if (arguments.distance)
-                                t = t*distanceUtility;
-                            if (t>=graphCache.minUtility) {
+                            float tempT;
+                            if (arguments.distance) {
+                                // std::cout << "Ours method" << std::endl;
+                                tempT = t*distanceUtility;
+                            } else {
+                                // std::cout << "Recache method" << std::endl;
+                                tempT = t;
+                            }   
+                            std::cout << tempT << " vs " << graphCache.minUtility << std::endl;
+                            if (tempT>=graphCache.minUtility) {
                                 std::cout << "add query graph " << graphIndex << " to cache" << std::endl; 
                                 graphCache.insert(queryGraph, resultsGraph, t, graphIndex, distanceMap);
                             }   
@@ -462,9 +471,16 @@ int main(int argc, char** argv) {
                         graphCache.insert(queryGraph, resultsGraph, t, graphIndex, distanceMap);       
                     } else {
                         t = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000000.0;
-                        if (arguments.distance)
-                            t = t*distanceUtility;
-                        if (t>=graphCache.minUtility) {
+                        float tempT;
+                        if (arguments.distance) {
+                            // std::cout << "Ours method" << std::endl;
+                            tempT = t*distanceUtility;
+                        } else {
+                            // std::cout << "Recache method" << std::endl;
+                            tempT = t;
+                        }  
+                        std::cout << tempT << " vs " << graphCache.minUtility << std::endl;
+                        if (tempT>=graphCache.minUtility) {
                             std::cout << "add query graph " << graphIndex << " to cache" << std::endl; 
                             graphCache.insert(queryGraph, resultsGraph, t, graphIndex, distanceMap);
                         }   
@@ -474,6 +490,7 @@ int main(int argc, char** argv) {
                     overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart2).count();                      
                 }
             }
+            graphCache.printCache();
         } else {
             bool timedout = false;
             std::vector<std::map<int,int>> resultsGraph;

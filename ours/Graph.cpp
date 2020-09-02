@@ -165,14 +165,15 @@ Graph readDimacsGraph(char* filename, bool directed, bool vertex_labelled) {
     int v, w;
     int edges_read = 0;
     int label;
-
+    int familyIndex;
     while (getline(&line, &nchar, f) != -1) {
         if (nchar > 0) {
             switch (line[0]) {
             case 'p':
-                if (sscanf(line, "p edge %d %d %d", &nvertices, &medges, &vectorSize)!=3)
+                if (sscanf(line, "p edge %d %d %d %d", &nvertices, &medges, &vectorSize, &familyIndex)!=4)
                     fail("Error reading a line beginning with p.\n");
                 g = Graph(nvertices, vectorSize);
+                g.familyIndex = familyIndex;
                 break;
             case 'e':
                 if (sscanf(line, "e %d %d", &v, &w)!=2)

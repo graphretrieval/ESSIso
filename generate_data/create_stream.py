@@ -14,9 +14,9 @@ from utils.corrupt_graph import remove_edge, remove_node, add_edge, add_node
 from networkx.algorithms import isomorphism
 from python_emb import * 
 
-def create_dimas_graph_format(graph, id_map, embedding, graph_index, multi2single_label):
+def create_dimas_graph_format(graph, id_map, embedding, graph_index, multi2single_label, family_index=0):
     inverted_id_map = {idx:node for node,idx in id_map.items()}
-    lines = ['p edge {} {} {}\n'.format(len(graph.nodes), len(graph.edges), embedding.shape[-1])]
+    lines = ['p edge {} {} {} {}\n'.format(len(graph.nodes), len(graph.edges), embedding.shape[-1], family_index)]
     lines.append(' '.join(map(str, embedding.mean(0))) + '\n')
     for n in range(len(inverted_id_map)):
         label = multi2single_label[tuple(graph.nodes[inverted_id_map[n]]['label'])]
@@ -136,10 +136,15 @@ second_value = first_value+x
 thirs_value = second_value+x 
 
 
-n_family = args.num_subgraphs
-for max_subgraph_nodes in [10, 15, 20, 25, 30]:
-    for rate in [10, 20, 30]:
-        savedir = os.path.join(args.embedding_model, '{}_{}_{}'.format(args.prefix.split('/')[-1], max_subgraph_nodes, rate))
+# n_family = args.num_subgraphs
+RANDOM = True
+n_family = 50
+N_CASES = 20
+LENGTH = 1000
+for max_subgraph_nodes in [10, 15]:
+    for rate in [10]:
+    # for rate in [args.rate]:
+        savedir = os.path.join(args.embedding_model, '{}_nnode{}_fam{}_rate{}_case{}_len{}_random'.format(args.prefix.split('/')[-1], max_subgraph_nodes, n_family, rate, N_CASES, LENGTH, RANDOM))
         if not os.path.isdir(savedir):
             os.makedirs(savedir)
 
@@ -152,7 +157,7 @@ for max_subgraph_nodes in [10, 15, 20, 25, 30]:
                 f.write(line)
 
         for set_index in range(20):
-            core_nodes = random.sample([node for node in query_machine.ori_graph], 3000)
+            core_nodes = random.sample([node for node in query_machine.ori_graph], min(3000, len(query_machine.ori_graph)))
             core_graphs = []
             case_dict = {}
             for core_node in core_nodes:
@@ -170,7 +175,8 @@ for max_subgraph_nodes in [10, 15, 20, 25, 30]:
                         break   
                 if success:
                     case_dict[len(core_graphs)-1] = {'case1': biggraph, 'case2':[], 'case3':[]}
-                    for _ in range(random.randint(10,100)):
+                    # N_CASES = random.randint(10,100)
+                    for _ in range(N_CASES):
                         n_tries = 0
                         while(True):
                             new_sampled_node = [i for i in biggraph.nodes()]
@@ -208,10 +214,11 @@ for max_subgraph_nodes in [10, 15, 20, 25, 30]:
             family_indexes = list(range(int(n_family)))
 
             print(len(core_graphs))
-            while(len(subgraph_queries) < 1000):
-                random_index = random.choice(family_indexes[-int(n_family):])
+            while(len(subgraph_queries) < LENGTH):
+                # random_index = random.choice(family_indexes[-int(n_family):])
+                random_index = random.randint(0, n_family-1)
                 random_number = random.randint(1,100)
-                if 1 <= random_number and random_number < rate:
+                if 1 <= random_number and random_number <= rate:
                     subgraph_queries.append(case_dict[random_index]['case1'])
                     family_indexes.append(random_index)
                 elif random_number < 2*rate:
@@ -234,13 +241,15 @@ for max_subgraph_nodes in [10, 15, 20, 25, 30]:
 
             query_lines = [] 
             dimas_query_lines = [] 
+            if RANDOM:
+                random.shuffle(subgraph_queries)
             for i, subgraph in tqdm(enumerate(subgraph_queries), desc="gen embedding subgraph"):
                 sub_id_map, sub_raw_feats, all_sub_adj, sub_degree = query_machine.create_subgraph_map(subgraph)
 
                 embedding_subgraph = query_machine.embedding_subgraph(sub_raw_feats, all_sub_adj, sub_degree)
                 embedding_subgraph = embedding_subgraph.detach().cpu().numpy()
                 if not np.isnan(embedding_subgraph).any():
-                    dimas_query_lines.append(create_dimas_graph_format(subgraph, sub_id_map, embedding_subgraph, i, ori_graph_data.multi2single_label))
+                    dimas_query_lines.append(create_dimas_graph_format(subgraph, sub_id_map, embedding_subgraph, i, ori_graph_data.multi2single_label, family_indexes[i]))
                     query_lines += create_graph_format(subgraph, sub_id_map, embedding_subgraph, i, ori_graph_data.multi2single_label)
 
             if not os.path.isdir(os.path.join(savedir, 'query{}'.format(set_index))):

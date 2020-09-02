@@ -1,3 +1,5 @@
+*pt
+data/*
 .vscode/
 MQO/test/*.cpp
 MQO/test/*.h

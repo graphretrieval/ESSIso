@@ -55,7 +55,24 @@ void Cache::insert(Graph g, std::vector<std::map<int,int>> embeddings, float t, 
     } else {
         float c = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - cStart).count()/1000.0;
         tTime.insert({index, t+c});
-        utilities.insert({index, t+c});        
+        if (!distance) {
+            // std::cout << "Recache method" << std::endl;
+            utilities.insert({index, t+c});
+        } else {
+            // std::cout << "Ours method" << std::endl;
+            for (auto i: cachedGraphs) {
+                std::unordered_map<int, float> distanceMap;
+                std::priority_queue<std::pair<float, int>> distanceQueue;
+                kScanCache(i.second, &distanceQueue, &distanceMap, _k+1);
+                float distanceUtility = 0;
+                while(distanceQueue.size()>0) {
+                    distanceUtility +=  distanceQueue.top().first;
+                    distanceQueue.pop();
+                }      
+                distanceUtilities[i.first] = distanceUtility;
+                utilities[i.first] = tTime[i.first] * distanceUtility;
+            }              
+        }
     }
 
     if (cachedGraphs.size() >= maxCacheSize) {
@@ -75,13 +92,22 @@ void Cache::evictCache() {
     for (std::unordered_map<int, float>::iterator it = utilities.begin(); it != utilities.end(); it++) {
         it->second -= minUtility;
     }
+    std::cout << "Evict " << nextIndexToEvicted << std::endl;
     deleteNode(nextIndexToEvicted, cachedGraphs.find(nextIndexToEvicted)->second.embeddingVector);
     cachedGraphs.erase(nextIndexToEvicted);
     cachedEmbeddings.erase(nextIndexToEvicted);
     utilities.erase(nextIndexToEvicted);
+    distanceUtilities.erase(nextIndexToEvicted);
 
 }
 
+void Cache::printCache() {
+    for (auto i: cachedGraphs) {
+        std::cout << "(" << i.first << "," << i.second.familyIndex << "," << utilities[i.first] << "," << tTime[i.first] <<"," << distanceUtilities[i.first] <<") ";
+    }
+    std::cout << std::endl;
+    std::cout << "Min utility " << minUtility << std::endl;
+}
 void Cache::updateCacheHit(int index, float s, int matchIndex) {
     std::unordered_map<int,float>::iterator it = utilities.find(index);
     if (it!=utilities.end()) {
@@ -91,7 +117,13 @@ void Cache::updateCacheHit(int index, float s, int matchIndex) {
             it->second = matchIndex;
         } else {
             std::unordered_map<int,float>::iterator it2 = tTime.find(index);
-            it->second += it2->second ;
+            if (distance) {
+                // std::cout << "Ours method" << std::endl;
+                it->second += (it2->second-s)*distanceUtilities[index] ;
+            } else {
+                // std::cout << "Recache method" << std::endl;
+                it->second += it2->second-s;
+            }                
         }        
     }
 
@@ -127,10 +159,12 @@ Cache::Cache(int size) {
     maxCacheSize = size;
 }
 
-Cache::Cache(int size, bool lru, bool lfu) {
+Cache::Cache(int size, bool lru, bool lfu, bool distance_, int k) {
     maxCacheSize = size;
     isLRU = lru;
     isLFU = lfu;
+    distance = distance_;
+    _k = k;
 }
 
 Cache::~Cache() {
