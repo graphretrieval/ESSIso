@@ -33,6 +33,7 @@ static struct argp_option options[] = {
     {"size", 's', "size", 0, "Specify a max cahce size"},
     {"cache", 'c', 0, 0, "Use cache"},
     {"use case 2", 'h', 0, 0, "Use case 2"},
+    {"brutal-force search", 'b', 0, 0, "Use brutal-force search"},
     {"vf2", 'v', 0, 0, "Use vf2"},
     {"use distance utility", 'd', 0, 0, "Use distance utility"},
     {"timeout", 't', "timeout", 0, "Specify a timeout (seconds)"},
@@ -65,6 +66,7 @@ static struct {
     bool distance;
     int omega;
     int k;
+    bool brutal;
 } arguments;
 
 void set_default_arguments() {
@@ -88,6 +90,7 @@ void set_default_arguments() {
     arguments.cache_size = 100;
     arguments.omega = 2;
     arguments.k = 5;
+    arguments.brutal = false;
 }
 
 static error_t parse_opt (int key, char *arg, struct argp_state *state) {
@@ -112,6 +115,9 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state) {
             break;
         case 'd':
             arguments.distance = true;
+            break;
+        case 'b':
+            arguments.brutal = true;
             break;
         case 't':
             cout << arg << endl;
@@ -165,6 +171,7 @@ int main(int argc, char** argv) {
     int numberofFound = 0;
     int numberofFound2 = 0;
     int hit = 0;
+    float searchTime = 0;
     set_default_arguments();
     argp_parse(&argp, argc, argv, 0, 0, 0);
     Graph dataGraph = readGraph(arguments.datagraph, arguments.directed,
@@ -235,8 +242,7 @@ int main(int argc, char** argv) {
     double overHeadTime = 0;
     double totalScanTime = 0;
     double totalComparation = 0;
-    Cache graphCache = Cache(arguments.cache_size, arguments.lru, arguments.lfu, arguments.distance, arguments.k);
-    std::cout << graphCache.distance << " " << arguments.distance <<  std::endl;
+    Cache graphCache = Cache(arguments.cache_size, arguments.lru, arguments.lfu, arguments.distance, arguments.brutal, arguments.k);
     int graphIndex = 0;
 
     for (Graph queryGraph : coldstartGraphVector) {
@@ -290,8 +296,28 @@ int main(int argc, char** argv) {
             int bestIndex = -1;
             std::unordered_map<int, float> distanceMap;
             std::priority_queue<std::pair<float, int>> distanceQueue;
-            graphCache.kScanCache(queryGraph, &distanceQueue, &distanceMap, arguments.k);
-            std::cout << "No comparasion " << distanceMap.size() << std::endl;
+            std::chrono::steady_clock::time_point sStartTime = std::chrono::steady_clock::now();
+            if (!arguments.brutal) {
+                graphCache.kScanCache(queryGraph, &distanceQueue, &distanceMap, arguments.k);
+                std::cout << "No comparasion " << distanceMap.size() << std::endl;                
+            } else {
+                std::vector<float> queryVector = queryGraph.embeddingVector;
+                for (const auto & cachedVector: graphCache.cachedEmbeddingVectors) {
+                    float distance = 0;
+                    for (int k = 0; k <queryVector.size();k++) {
+                        distance += (cachedVector.second[k] - queryVector[k]) * (cachedVector.second[k] - queryVector[k]);
+                        // if (distance > bestDistance) break;
+                    }
+                    distanceMap.insert({cachedVector.first, distance});
+                    if (distanceQueue.size() < arguments.k) {
+                        distanceQueue.push({distance, cachedVector.first});
+                    } else if (distance < distanceQueue.top().first) {
+                        distanceQueue.pop();
+                        distanceQueue.push({distance, cachedVector.first});
+                    }
+                }             
+            }
+            searchTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count();
             totalComparation += distanceMap.size();
             float distanceUtility = 0;
             if (distanceQueue.size()>0)  {
@@ -306,7 +332,7 @@ int main(int argc, char** argv) {
                     int currIndex = S.top();
                     S.pop();
                     bestElem = graphCache.getGraphById(currIndex);
-                    std::cout << bestElem->familyIndex << " ";
+                    std::cout << currIndex << " " << bestElem->familyIndex << " ";
                     std::map<int,int> tempMapNode;
                     bool timedout = false;
                     std::vector<std::map<int,int>> tempResults;
@@ -318,10 +344,11 @@ int main(int argc, char** argv) {
                             subGraphSlover.getAllSubGraphs(*bestElem,queryGraph, 0, 1);
                         }
                         catch(std::runtime_error& e) {
-                            std::cout << e.what() << std::endl;
+                            std::cout << "Time out" << std::endl;
                             timedout = true;
                         }
                         tempMapNode = subGraphSlover.largestMapping;
+                        std::cout << tempMapNode.size() << " " << queryGraph.n << " " << bestElem->n << std::endl;
                         if (tempMapNode.size() ==bestElem->n && bestElem->n == queryGraph.n) {
                             cachedGraphIndexCase1 = currIndex;
                             mapNode = tempMapNode;
@@ -344,11 +371,12 @@ int main(int argc, char** argv) {
                             // subGraphSlover.getAllSubGraphs(*bestElem,queryGraph, 0, 1);
                         }
                         catch(std::runtime_error& e) {
-                            std::cout << e.what() << std::endl;
+                            std::cout << "Time out" << std::endl;
                             timedout = true;
                         }
 
                         tempMapNode = subGraphSlover.largestMapping;
+                        std::cout << tempMapNode.size()<< " " << queryGraph.n << " " << bestElem->n << std::endl;
                         if (tempMapNode.size() > mapNode.size() && tempMapNode.size() +arguments.omega > queryGraph.n && tempMapNode.size()< queryGraph.n) {
                             mapNode.clear();
                             for (auto i : tempMapNode) 
@@ -532,10 +560,11 @@ int main(int argc, char** argv) {
         std::cout << "======================================" << std::endl;
     }
     std::cout << "Avg comparation: " << totalComparation/(1000*arguments.cache_size) << std::endl;
-    std::cout << "Total build time: " << buildTime/1000 << std::endl;
-    std::cout << "Total scan time: " << totalScanTime << std::endl;
-    std::cout << "Total overhead time: " << overHeadTime/1000 << std::endl;
-    std::cout << "Total running time: " << totalTime << std::endl;
+    std::cout << "Total build time: " << buildTime/1000 << " ms" << std::endl;
+    std::cout << "Total scan time: " << totalScanTime << " ms" << std::endl;
+    std::cout << "Total overhead time: " << overHeadTime/1000 << " ms" << std::endl;
+    std::cout << "Total search time: " << searchTime/1000 << " ms" << std::endl;
+    std::cout << "Total running time: " << totalTime << " ms"<< std::endl;
     std::cout << "Number of found: " << numberofFound << " " << numberofFound2 << std::endl;
     std::cout << "Hit: " << hit << std::endl;
 }

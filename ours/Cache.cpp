@@ -42,12 +42,33 @@ void Cache::deleteNode(int index, std::vector<float> point) {
 
 void Cache::insert(Graph g, std::vector<std::map<int,int>> embeddings, float t, int index, std::unordered_map<int, float> distanceMap) {
     std::chrono::steady_clock::time_point cStart = std::chrono::steady_clock::now();
+    if (brutal && distance) {
+        std::vector<std::pair<int,float>> distanceQueue;
+        for (const auto& i: distanceMap) {
+            distanceQueue.push_back({i.first, i.second});
+            cachedDistanceQueues[i.first].push_back({index, i.second});
+            std::push_heap(cachedDistanceQueues[i.first].begin(), cachedDistanceQueues[i.first].end(), [](const std::pair<int, float>& a, const std::pair<int, float>& b) -> bool
+            { 
+                return a.second > b.second; 
+            });
+        }
+        std::make_heap(distanceQueue.begin(), distanceQueue.end(), [](const std::pair<int, float>& a, const std::pair<int, float>& b) -> bool
+            { 
+                return a.second > b.second; 
+            });    
+        cachedDistanceQueues.insert({index, distanceQueue}); 
+    }
+
     if (cachedGraphs.size() >= maxCacheSize) 
         evictCache();
     cachedGraphs.insert({index, g});
     cachedEmbeddings.insert({index, embeddings});
+    cachedEmbeddingVectors.insert({index, g.embeddingVector});
+    
     // frequentUse.insert({index,0});
-    insertNode(index, g.embeddingVector);
+    if (!brutal) {
+        insertNode(index, g.embeddingVector);
+    }
     if (isLFU) {
         utilities.insert({index, 1});
     } else if (isLRU) {
@@ -60,18 +81,39 @@ void Cache::insert(Graph g, std::vector<std::map<int,int>> embeddings, float t, 
             utilities.insert({index, t+c});
         } else {
             // std::cout << "Ours method" << std::endl;
-            for (auto i: cachedGraphs) {
-                std::unordered_map<int, float> distanceMap;
-                std::priority_queue<std::pair<float, int>> distanceQueue;
-                kScanCache(i.second, &distanceQueue, &distanceMap, _k+1);
-                float distanceUtility = 0;
-                while(distanceQueue.size()>0) {
-                    distanceUtility +=  distanceQueue.top().first;
-                    distanceQueue.pop();
-                }      
-                distanceUtilities[i.first] = distanceUtility;
-                utilities[i.first] = tTime[i.first] * distanceUtility;
-            }              
+            if (!brutal) {
+                for (auto i: cachedGraphs) {
+                    std::unordered_map<int, float> distanceMap;
+                    std::priority_queue<std::pair<float, int>> distanceQueue;
+                    kScanCache(i.second, &distanceQueue, &distanceMap, _k+1);
+                    float distanceUtility = 0;
+                    while(distanceQueue.size()>0) {
+                        distanceUtility +=  distanceQueue.top().first;
+                        distanceQueue.pop();
+                    }      
+                    distanceUtilities[i.first] = distanceUtility;
+                    utilities[i.first] = tTime[i.first] * distanceUtility;
+                }                 
+            }
+            else {
+                for (const auto& i :cachedDistanceQueues) {
+                    float distanceUtility = 0;
+                    std::vector<std::pair<int, float>> temp = i.second;
+                    for (int i =0; i < _k; i++) {
+                        if (temp.size() ==0) {
+                            break;
+                        }
+                        distanceUtility += temp.front().second;
+                        std::pop_heap(temp.begin(), temp.end(), [](const std::pair<int, float>& a, const std::pair<int, float>& b) -> bool
+                            { 
+                                return a.second > b.second; 
+                            });
+                        temp.pop_back(); 
+                    }
+                    distanceUtilities[i.first] = distanceUtility;
+                    utilities[i.first] = tTime[i.first] * distanceUtility;
+                }
+            }            
         }
     }
 
@@ -93,12 +135,27 @@ void Cache::evictCache() {
         it->second -= minUtility;
     }
     std::cout << "Evict " << nextIndexToEvicted << std::endl;
-    deleteNode(nextIndexToEvicted, cachedGraphs.find(nextIndexToEvicted)->second.embeddingVector);
+    if (!brutal) {
+        deleteNode(nextIndexToEvicted, cachedGraphs.find(nextIndexToEvicted)->second.embeddingVector);
+    }
     cachedGraphs.erase(nextIndexToEvicted);
     cachedEmbeddings.erase(nextIndexToEvicted);
+    cachedEmbeddingVectors.erase(nextIndexToEvicted);
     utilities.erase(nextIndexToEvicted);
     distanceUtilities.erase(nextIndexToEvicted);
-
+    cachedDistanceQueues.erase(nextIndexToEvicted);
+    for (auto& cachedDistanceQueue : cachedDistanceQueues) {
+        for (int index = 0;index < cachedDistanceQueue.second.size();index++) {
+            if (cachedDistanceQueue.second[index].first == nextIndexToEvicted) {
+                cachedDistanceQueue.second.erase(cachedDistanceQueue.second.begin()+index);
+                break;
+            }
+        }
+        std::make_heap(cachedDistanceQueue.second.begin(), cachedDistanceQueue.second.end(), [](const std::pair<int, float>& a, const std::pair<int, float>& b) -> bool
+        { 
+            return a.second > b.second; 
+        });
+    }
 }
 
 void Cache::printCache() {
@@ -119,10 +176,12 @@ void Cache::updateCacheHit(int index, float s, int matchIndex) {
             std::unordered_map<int,float>::iterator it2 = tTime.find(index);
             if (distance) {
                 // std::cout << "Ours method" << std::endl;
-                it->second += (it2->second-s)*distanceUtilities[index] ;
+                if (it2->second-s >0 )
+                    it->second += (it2->second-s)*distanceUtilities[index] ;
             } else {
                 // std::cout << "Recache method" << std::endl;
-                it->second += it2->second-s;
+                if (it2->second-s)
+                    it->second += it2->second-s;
             }                
         }        
     }
@@ -164,6 +223,15 @@ Cache::Cache(int size, bool lru, bool lfu, bool distance_, int k) {
     isLRU = lru;
     isLFU = lfu;
     distance = distance_;
+    _k = k;
+}
+
+Cache::Cache(int size, bool lru, bool lfu, bool distance_, bool brutal_, int k) {
+    maxCacheSize = size;
+    isLRU = lru;
+    isLFU = lfu;
+    distance = distance_;
+    brutal = brutal_;
     _k = k;
 }
 

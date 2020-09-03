@@ -15,6 +15,7 @@ public:
     bool isLRU = false;
     bool isLFU = false;
     bool distance = false;
+    bool brutal = false;
     int nextIndexToEvicted = -1;
     float minUtility = 0;
     int _k;
@@ -22,6 +23,8 @@ public:
     std::unordered_map<int, float> utilities;
     std::unordered_map<int, float> distanceUtilities;
     std::unordered_map<int, Graph> cachedGraphs;
+    std::unordered_map<int, std::vector<float>> cachedEmbeddingVectors;
+    std::unordered_map<int, std::vector<std::pair<int, float>>> cachedDistanceQueues;
 private:
     struct Node *root = NULL; 
     // std::unordered_map<int, Graph> cachedGraphs;
@@ -50,6 +53,7 @@ public:
     Cache(/* args */);
     Cache(int size);
     Cache(int size, bool isLRU, bool isLFU, bool distance, int k);
+    Cache(int size, bool isLRU, bool isLFU, bool distance, bool brutal, int k);
     ~Cache();
 };
 
