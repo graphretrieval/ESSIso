@@ -1,5 +1,5 @@
 tout=0.1
-for graph_size in 30
+for graph_size in 25 20 15 10
 do
     for dataset in yeast human cora citeseer pubmed
     do
