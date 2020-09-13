@@ -20,7 +20,7 @@ def remove_edge(subgraph,n_edges=1):
     subG = nx.relabel_nodes(subgraph,mapping)
     removed_edges= [edge for edge in subG.edges()]
     removed_edge = random.sample(removed_edges, min(n_edges, len(removed_edges)))
-    subG.remove_edges_from([removed_edge])
+    subG.remove_edges_from(removed_edge)
     return subG 
 
 def add_node(subgraph,n_edges=1):

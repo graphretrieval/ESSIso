@@ -259,7 +259,7 @@ int main(int argc, char** argv) {
         }
         std::vector<std::map<int,int>> resultsGraph;
         try {
-            turboIsoSlover.timeOut = 10;
+            turboIsoSlover.timeOut = 0.001;
             turboIsoSlover.getAllSubGraphs(dataGraph, queryGraph, 0, arguments.maxResult);
         }
         catch(std::runtime_error& e) {
@@ -339,7 +339,7 @@ int main(int argc, char** argv) {
 
                     if (queryGraph.n <= bestElem->n) {
                         try {
-                            subGraphSlover.timeOut = 0.1;
+                            subGraphSlover.timeOut = 0.001;
                             // subGraphSlover.getAllSubGraphs(queryGraph, elem.second, 0, 1);
                             subGraphSlover.getAllSubGraphs(*bestElem,queryGraph, 0, 1);
                         }
@@ -366,7 +366,7 @@ int main(int argc, char** argv) {
                     } 
                     else if (arguments.case2) {
                         try {
-                            subGraphSlover.timeOut = 0.1;
+                            subGraphSlover.timeOut = 0.001;
                             subGraphSlover.getAllSubGraphs(queryGraph, *bestElem, 0, 1);
                             // subGraphSlover.getAllSubGraphs(*bestElem,queryGraph, 0, 1);
                         }

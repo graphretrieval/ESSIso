@@ -7,7 +7,9 @@
 
 using namespace std;
 
-MQO::MQO() {}
+MQO::MQO() {
+	numOfFound = 0;
+}
 
 MQO::MQO(std::vector<AdjacenceListsGRAPH> * pDataGraphVector, std::vector<AdjacenceListsGRAPH> * pQueryGraphVector, std::ofstream * pResultFile) {
 
@@ -315,7 +317,8 @@ void MQO::orederedQueryProcessing() {
 				}
 			}
 		}
-
+		if (numberOfEmbeddings[orderIterator->pcmId]>0)
+			numOfFound += 1;
 		/*
 		 * release the memory
 		 */

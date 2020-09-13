@@ -9,7 +9,7 @@
 #include<queue>
 #include <limits>
 #include"GlobalConstant.h"
-#include<faiss/IndexFlat.h>
+// #include<faiss/IndexFlat.h>
 #include<algorithm>
 #include <iterator>
 #include"GlobalConstant.h"
@@ -73,7 +73,7 @@ void EmBoost::execute() {
 	}
 
 void EmBoost::filterCandidates() {
-	faiss::IndexFlatL2 index(GlobalConstant::embeddingDimension);
+	// faiss::IndexFlatL2 index(GlobalConstant::embeddingDimension);
 	for(int i = 0; i <  dataGraph->getNumberOfVertexes(); i++) {
 		for(int j = 0; j < 3; j++)
 			printf("%f ", dataGraph->getEmbeddingMatrix()[i * 3 + j]);
@@ -84,11 +84,11 @@ void EmBoost::filterCandidates() {
 			printf("%f ", queryGraph->getEmbeddingMatrix()[i * 3 + j]);
 		printf("\n");
     }
-	index.add(dataGraph->getNumberOfVertexes(), dataGraph->getEmbeddingMatrix()); 
+	// index.add(dataGraph->getNumberOfVertexes(), dataGraph->getEmbeddingMatrix()); 
 	long *I = new long[GlobalConstant::numberOfCandidates * queryGraph->getNumberOfVertexes()];
     float *D = new float[GlobalConstant::numberOfCandidates * queryGraph->getNumberOfVertexes()];
 
-	index.search(queryGraph->getNumberOfVertexes(), queryGraph->getEmbeddingMatrix(), GlobalConstant::numberOfCandidates, D, I);
+	// index.search(queryGraph->getNumberOfVertexes(), queryGraph->getEmbeddingMatrix(), GlobalConstant::numberOfCandidates, D, I);
 
 	vector<vector<int>> filterFaissCandidateList;
 	for (int i = 0; i< queryGraph->getNumberOfVertexes();i++) {

@@ -87,7 +87,8 @@ private:
 	TurboIsoBoosted * turboIsoBoosted;
 
 	TurboIsoBoostedMQO * turboIsoBoostedMQO;
-
+public:
+	int numOfFound=0;
 public:
 
 	MQO();
