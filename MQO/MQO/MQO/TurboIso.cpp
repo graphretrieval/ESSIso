@@ -14,7 +14,7 @@
 #include <functional>
 #include<float.h>
 #include"GlobalConstant.h"
-#include<faiss/IndexFlat.h>
+//#include<faiss/IndexFlat.h>
 #include <chrono>
 
 using namespace std;
