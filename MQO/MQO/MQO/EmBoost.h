@@ -4,7 +4,7 @@
 #include"ComboLinkedLists.h"
 #include<vector>
 #include<map>
-#include<faiss/IndexFlat.h>
+// #include<faiss/IndexFlat.h>
 
 using namespace std;
 

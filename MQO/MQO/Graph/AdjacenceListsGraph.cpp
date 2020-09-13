@@ -53,13 +53,13 @@ std::map<std::pair<int, int>, std::vector<std::pair<int, int>>> * AdjacenceLists
 }
 
 void AdjacenceListsGRAPH::buildIndex() {
-	index = new faiss::IndexFlatL2(GlobalConstant::embeddingDimension);
-	index->add(getNumberOfVertexes(), getEmbeddingMatrix());
+	// index = new faiss::IndexFlatL2(GlobalConstant::embeddingDimension);
+	// index->add(getNumberOfVertexes(), getEmbeddingMatrix());
 }
 
-faiss::IndexFlatL2 * AdjacenceListsGRAPH::getIndex() {
-	return index;
-}
+// faiss::IndexFlatL2 * AdjacenceListsGRAPH::getIndex() {
+// 	return index;
+// }
 
 float* AdjacenceListsGRAPH::getEmbeddingMatrix() {
 	return embeddingMatrix;

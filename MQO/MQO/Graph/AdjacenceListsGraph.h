@@ -5,7 +5,7 @@
 #include<map>
 #include<iostream>
 #include<fstream>
-#include<faiss/IndexFlat.h>
+// #include<faiss/IndexFlat.h>
 
 class AdjacenceListsGRAPH;
 
@@ -136,7 +136,7 @@ public:
 
 private:
 	int numberOfVertex, numberOfEdges;
-	faiss::IndexFlatL2  * index;
+	// faiss::IndexFlatL2  * index;
 	bool digraph;
 	std::vector<Edge> edgeList;
 
@@ -193,7 +193,7 @@ public:
 	~AdjacenceListsGRAPH();
 
 	void buildIndex();
-	faiss::IndexFlatL2 *getIndex();
+	// faiss::IndexFlatL2 *getIndex();
 	bool directed() const;
 
 	void insert(Vertex v);

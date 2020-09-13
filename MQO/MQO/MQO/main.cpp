@@ -215,6 +215,7 @@ int main(int argc, char* argv[]) {
 				cout << " MQO Time: " << tMQO.GetCounterMill() << "(milliseconds)" << endl << endl;
 			} else {
 				double totalTime = 0;
+				int numOfFound = 0;
 				int size = (queryGraphVector.size() - 1) / GlobalConstant::batchSize + 1;
 				std::vector<AdjacenceListsGRAPH> batchQueryGraphVector;
 				std::chrono::steady_clock::time_point sStart;
@@ -254,9 +255,11 @@ int main(int argc, char* argv[]) {
 					mqo.orederedQueryProcessing();
 					// totalTime += tMQO.GetCounterMill();
 					totalTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000.0;
+					numOfFound += mqo.numOfFound;
 				}
 				cout << " Overhead Time: " << overHeadTime/1000 << endl;
-				cout << " MQO Time: " << totalTime << "(milliseconds)" << endl << endl;
+				cout << " MQO Time: " << totalTime << "(milliseconds)" << endl;
+				cout << "Number of found: " << numOfFound << endl;
 			}
 		}
 		
