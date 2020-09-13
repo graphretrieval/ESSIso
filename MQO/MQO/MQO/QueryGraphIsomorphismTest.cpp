@@ -9,7 +9,6 @@ using namespace std;
 
 
 bool QueryGraphIsomorphismTest::isGraphIsomorphic(AdjacenceListsGRAPH * pDataGraph, AdjacenceListsGRAPH * pQueryGraph) {
-	std::cout << "check isGraphIsomorphic" << std::endl;
 	dataGraph = pDataGraph;
 	queryGraph = pQueryGraph;
 	embeddingFound = false;
@@ -27,12 +26,15 @@ bool QueryGraphIsomorphismTest::isGraphIsomorphic(AdjacenceListsGRAPH * pDataGra
 	filterCandidates();
 
 	if (candidates.size() != queryGraph->getNumberOfVertexes()) {
+		candidates = std::map<int, vector<int> >();
+		inverseEmbedding = std::map<int, int>();
+		delete[] embedding;
 		return false;
 	}
 
 	isomorphismSearch();
 
-	candidates = std::map<int, vector<int>* >();
+	candidates = std::map<int, vector<int> >();
 	inverseEmbedding = std::map<int, int>();
 	delete [] embedding;
 
@@ -53,7 +55,7 @@ void QueryGraphIsomorphismTest::filterCandidates() {
 		*/
 		candidateSetsIterator = labelDataVertexList->find(queryVertexIterator->label);
 		if (candidateSetsIterator != labelDataVertexList->end()) {
-			candidates.insert(std::pair<int, std::vector<int> *>(queryVertexIterator->id, &candidateSetsIterator->second));
+			candidates.insert(std::pair<int, std::vector<int> >(queryVertexIterator->id, candidateSetsIterator->second));
 		}
 	}
 }
@@ -72,10 +74,10 @@ void QueryGraphIsomorphismTest::isomorphismSearch() {
 		return;
 	}
 	AdjacenceListsGRAPH::Vertex u = nextQueryVertex();
-	vector<int> * candidates_u = candidates.find(u.id)->second;
+	vector<int> candidates_u = candidates.find(u.id)->second;
 
 	// For each v in C(u)
-	for (vector<int>::iterator v = candidates_u->begin(); v != candidates_u->end(); v++) {
+	for (vector<int>::iterator v = candidates_u.begin(); v != candidates_u.end(); v++) {
 		if (embeddingFound) {
 			return; 
 		}

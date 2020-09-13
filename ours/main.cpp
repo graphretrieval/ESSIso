@@ -167,7 +167,7 @@ bool endsWith(const std::string &mainStr, const std::string &toMatch) {
 }
 
 int main(int argc, char** argv) {
-    unsigned long totalTime = 0;
+    float totalTime = 0;
     int numberofFound = 0;
     int numberofFound2 = 0;
     int hit = 0;
@@ -332,7 +332,7 @@ int main(int argc, char** argv) {
                     int currIndex = S.top();
                     S.pop();
                     bestElem = graphCache.getGraphById(currIndex);
-                    std::cout << currIndex << " " << bestElem->familyIndex << " ";
+                    // std::cout << currIndex << " " << bestElem->familyIndex << " ";
                     std::map<int,int> tempMapNode;
                     bool timedout = false;
                     std::vector<std::map<int,int>> tempResults;
@@ -348,7 +348,7 @@ int main(int argc, char** argv) {
                             timedout = true;
                         }
                         tempMapNode = subGraphSlover.largestMapping;
-                        std::cout << tempMapNode.size() << " " << queryGraph.n << " " << bestElem->n << std::endl;
+                        // std::cout << tempMapNode.size() << " " << queryGraph.n << " " << bestElem->n << std::endl;
                         if (tempMapNode.size() ==bestElem->n && bestElem->n == queryGraph.n) {
                             cachedGraphIndexCase1 = currIndex;
                             mapNode = tempMapNode;
@@ -376,7 +376,7 @@ int main(int argc, char** argv) {
                         }
 
                         tempMapNode = subGraphSlover.largestMapping;
-                        std::cout << tempMapNode.size()<< " " << queryGraph.n << " " << bestElem->n << std::endl;
+                        // std::cout << tempMapNode.size()<< " " << queryGraph.n << " " << bestElem->n << std::endl;
                         if (tempMapNode.size() > mapNode.size() && tempMapNode.size() +arguments.omega > queryGraph.n && tempMapNode.size()< queryGraph.n) {
                             mapNode.clear();
                             for (auto i : tempMapNode) 
@@ -386,7 +386,7 @@ int main(int argc, char** argv) {
                         } 
                     }
                 }   
-                std::cout << std::endl;
+                // std::cout << std::endl;
             }
             totalScanTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000.0;
             bool useCache = false;
@@ -454,7 +454,7 @@ int main(int argc, char** argv) {
                                 // std::cout << "Recache method" << std::endl;
                                 tempT = t;
                             }   
-                            std::cout << tempT << " vs " << graphCache.minUtility << std::endl;
+                            // std::cout << tempT << " vs " << graphCache.minUtility << std::endl;
                             if (tempT>=graphCache.minUtility) {
                                 std::cout << "add query graph " << graphIndex << " to cache" << std::endl; 
                                 graphCache.insert(queryGraph, resultsGraph, t, graphIndex, distanceMap);
@@ -518,7 +518,7 @@ int main(int argc, char** argv) {
                     overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart2).count();                      
                 }
             }
-            graphCache.printCache();
+            // graphCache.printCache();
         } else {
             bool timedout = false;
             std::vector<std::map<int,int>> resultsGraph;
@@ -549,7 +549,7 @@ int main(int argc, char** argv) {
             }
         }
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-        int runningTime = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count()/1000.0;
+        float runningTime = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin).count()/1000000.0;
         totalTime +=  runningTime;
         // std::cout << "Utility" << std::endl;
         // for (auto i : graphCache.utilities) {

@@ -55,7 +55,7 @@ void PCMBuilder::execute() {
 	/*
 	 * subgraph isomorphism is faster than the
 	 */
-	cout << "buildContainmentRelations" << endl;
+	// cout << "buildContainmentRelations" << endl;
 	buildContainmentRelations();
 
 #ifdef DEBUG
@@ -88,7 +88,7 @@ void PCMBuilder::execute() {
 	}
 
 #ifdef DEBUG
-	(*resultFile) << endl << "Relative Tls Matrix after threshold : " << GlobalConstant::G_COMMON_TLS_RATIO << endl;
+	// (*resultFile) << endl << "Relative Tls Matrix after threshold : " << GlobalConstant::G_COMMON_TLS_RATIO << endl;
 	MatrixUtility::outputBoolMatrix(tlsRelativeMatrix, (*queryGraphVector).size(), (*queryGraphVector).size(), resultFile);
 #endif
 
@@ -112,7 +112,7 @@ void PCMBuilder::execute() {
 	/*
 	* Based on the trimmed tls matrix, we detect the common graphs
 	*/
-	cout << "similiarQueryGroups size " << similiarQueryGroups.size() << endl;
+	// cout << "similiarQueryGroups size " << similiarQueryGroups.size() << endl;
 	for (std::vector<vector<int>>::iterator groupIterator = similiarQueryGroups.begin(); groupIterator != similiarQueryGroups.end(); groupIterator++) {
 		if (groupIterator->size() < GlobalConstant::G_GOURP_QUERY_CLIQUE_MINI_SIZE) {
 			/* for each clique, we restrict the clique size minimum as 3, cause if it is 2, it is only an edge represents 
@@ -120,7 +120,7 @@ void PCMBuilder::execute() {
 			 */
 			continue;
 		}
-		cout << "detectCommonSubgraphs " << groupIterator->size() << endl;
+		// cout << "detectCommonSubgraphs " << groupIterator->size() << endl;
 		detectCommonSubgraphs(*groupIterator);
 	}
 
@@ -128,7 +128,7 @@ void PCMBuilder::execute() {
 	/*
 	 * transitive reduction and remove isomorphisic queries
 	 */
-	cout << "formatPCM" << endl;
+	// cout << "formatPCM" << endl;
 	formatPCM();
 
 #ifdef DEBUG
@@ -146,11 +146,20 @@ void PCMBuilder::hideIsomorphicQueries()
 			}
 			std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
-			bool a = graphIsomorphism.isGraphIsomorphic(&(*queryGraphVector)[i], &(*queryGraphVector)[j]);
-			std::cout << "isGraphIsomorphic time " << std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() ; 
-
+			bool a = false;
+			// std::cout << "isGraphIsomorphic time " << std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() ; 
+			try {
+				std::cout << "hideIsomorphicQueries" << std::endl;
+				a = graphIsomorphism.isGraphIsomorphic(&(*queryGraphVector)[i], &(*queryGraphVector)[j]);
+				std::cout << "done" << std::endl;
+			}
+			// catch(std::runtime_error& e) {
+			catch(...) {
+				// std::cout << "subgraphIsomorphismSearch " << e.what() << std::endl;
+				std::cout << "hideIsomorphicQueries error " << std::endl;
+			}
 			if ( a ) {
-				std::cout << "Iso WTF " << i << " " << j << std::endl;
+				// std::cout << "Iso WTF " << i << " " << j << std::endl;
 				/*
 				* Those two query graphs are isomorphic
 				*/
@@ -172,22 +181,22 @@ void PCMBuilder::buildContainmentRelations()
 
 	for (size_t i = 0; i < queryGraphVector->size(); i++) {
 		if ((*patternContainmentMap)[i].isHidden == true) {
-			std::cout << "Continue" << std::endl;
+			// std::cout << "Continue" << std::endl;
 			continue;
 		} else {
-			std::cout << "Not continue" << std::endl;
+			// std::cout << "Not continue" << std::endl;
 		}
 
 		for (size_t j = i + 1; j < queryGraphVector->size(); j++) {
-			std::cout << i << " " << j << std::endl;
+			// std::cout << i << " " << j << std::endl;
 			/*
 			 * Equivalent Filter
 			 */
 			if ((*patternContainmentMap)[j].isHidden == true) {
-				std::cout << "Continue" << std::endl;
+				// std::cout << "Continue" << std::endl;
 				continue;
 			} else {
-				std::cout << "Not continue" << std::endl;
+				// std::cout << "Not continue" << std::endl;
 			}
 
 			AdjacenceListsGRAPH * dataGraph, *queryGraph;
@@ -199,11 +208,11 @@ void PCMBuilder::buildContainmentRelations()
 				dataGraph = &(*queryGraphVector)[j];
 				queryGraph = &(*queryGraphVector)[i];
 			}
-			std::cout << "data and query graph are determined" << std::endl;
+			// std::cout << "data and query graph are determined" << std::endl;
 			/*
 			 * Use TLS filter, the similarity of subgraph isomorphic queries is 1
 			 */
-			std::cout << "tlsGraphMatrix[i][j]="<<tlsGraphMatrix[i][j]<< std::endl;
+			// std::cout << "tlsGraphMatrix[i][j]="<<tlsGraphMatrix[i][j]<< std::endl;
 			if (tlsGraphMatrix[i][j] != 1) {
 				continue;
 			}
@@ -211,7 +220,7 @@ void PCMBuilder::buildContainmentRelations()
 			/*
 			 * Already relationship filter
 			 */
-			std::cout << "Another check " << ((*patternContainmentMap)[queryGraph->graphId].descendent.find(dataGraph->graphId) != (*patternContainmentMap)[queryGraph->graphId].descendent.end()) << std::endl;
+			// std::cout << "Another check " << ((*patternContainmentMap)[queryGraph->graphId].descendent.find(dataGraph->graphId) != (*patternContainmentMap)[queryGraph->graphId].descendent.end()) << std::endl;
 			if ((*patternContainmentMap)[queryGraph->graphId].descendent.find(dataGraph->graphId) != (*patternContainmentMap)[queryGraph->graphId].descendent.end()) {
 				continue;
 			}
@@ -220,24 +229,27 @@ void PCMBuilder::buildContainmentRelations()
 			try {
 				std::cout << "subgraphIsomorphismSearch" << std::endl;
 				subgraphIsomorphism.subgraphIsomorphismSearch(dataGraph, queryGraph, &mappings);
+				std::cout << "done" << std::endl;
 			}
-			catch(std::runtime_error& e) {
-				std::cout << "subgraphIsomorphismSearch " << e.what() << std::endl;
+			// catch(std::runtime_error& e) {
+			catch(...) {
+				// std::cout << "subgraphIsomorphismSearch " << e.what() << std::endl;
+				std::cout << "subgraphIsomorphismSearch error " << std::endl;
 			}
-			std::cout << mappings.size() << std::endl;
+			// std::cout << mappings.size() << std::endl;
 			// subgraphIsomorphism.subgraphIsomorphismSearch(dataGraph, queryGraph, &mappings);
 			if (mappings.size() > 0) {
-				std::cout << "Try to insert" << std::endl;
+				// std::cout << "Try to insert" << std::endl;
 				(*patternContainmentMap)[queryGraph->graphId].descendent.insert(dataGraph->graphId);
-				std::cout << "Try to insert" << std::endl;
+				// std::cout << "Try to insert" << std::endl;
 				(*patternContainmentMap)[queryGraph->graphId].descendent.insert((*patternContainmentMap)[dataGraph->graphId].descendent.begin(), (*patternContainmentMap)[dataGraph->graphId].descendent.end());
-				std::cout << "Try to insert" << std::endl;
+				// std::cout << "Try to insert" << std::endl;
 				(*patternContainmentMap)[queryGraph->graphId].containmentRelationshipMappingLists.insert(std::pair<int, vector<vector<int>>>(dataGraph->graphId, mappings));
-				std::cout << "inserted" << std::endl;
+				// std::cout << "inserted" << std::endl;
 			}
 		}
 	}
-	std::cout << "built" << std::endl;
+	// std::cout << "built" << std::endl;
 }
 
 void PCMBuilder::detectCommonSubgraphs(vector<int> & groupQuery) {
@@ -277,9 +289,9 @@ void PCMBuilder::detectCommonSubgraphs(vector<int> & groupQuery) {
 		}
 
 		AdjacenceListsGRAPH mcsGraph;
-		cout << "computeMaximumCommonSubgraph " << pairStartQuery->getNumberOfVertexes() << " " << pairEndQuery->getNumberOfVertexes() << endl;
+		// cout << "computeMaximumCommonSubgraph " << pairStartQuery->getNumberOfVertexes() << " " << pairEndQuery->getNumberOfVertexes() << endl;
 		FindMaximumCommonSubgraph::computeMaximumCommonSubgraph(pairStartQuery, pairEndQuery, &mcsGraph);
-		cout << "end " << mcsGraph.getNumberOfVertexes() << endl;
+		// cout << "end " << mcsGraph.getNumberOfVertexes() << endl;
 		if (mcsGraph.getNumberOfVertexes() == 0) {
 			continue;
 		}

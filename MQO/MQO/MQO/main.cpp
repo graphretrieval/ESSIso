@@ -17,6 +17,8 @@
 #include "CommonSubGraph.h"
 #include <vector>
 #include <string>
+#include <chrono>
+
 
 
 using namespace std;
@@ -215,6 +217,7 @@ int main(int argc, char* argv[]) {
 				double totalTime = 0;
 				int size = (queryGraphVector.size() - 1) / GlobalConstant::batchSize + 1;
 				std::vector<AdjacenceListsGRAPH> batchQueryGraphVector;
+				std::chrono::steady_clock::time_point sStart;
 				for (int k = 0; k < size; ++k) {
 					// get range for next set of n elements
 					auto start_itr = std::next(queryGraphVector.cbegin(), k*GlobalConstant::batchSize);
@@ -239,6 +242,7 @@ int main(int argc, char* argv[]) {
 					TimeUtility tMQO;
 					TimeUtility tMQO2;
 					tMQO.StartCounterMill();
+        			sStart = std::chrono::steady_clock::now();
 					tMQO2.StartCounterMicro();
 					cout << endl << "Start Building PCM... " << endl;
 					mqo.buildPCM();
@@ -248,7 +252,8 @@ int main(int argc, char* argv[]) {
 					overHeadTime += tMQO2.GetCounterMicro();
 					cout << endl << "Start Multi-Query Processing... " << endl;
 					mqo.orederedQueryProcessing();
-					totalTime += tMQO.GetCounterMill();
+					// totalTime += tMQO.GetCounterMill();
+					totalTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000.0;
 				}
 				cout << " Overhead Time: " << overHeadTime/1000 << endl;
 				cout << " MQO Time: " << totalTime << "(milliseconds)" << endl << endl;

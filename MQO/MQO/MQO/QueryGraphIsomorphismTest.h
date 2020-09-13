@@ -24,7 +24,7 @@ private:
 private:
     std::chrono::steady_clock::time_point startTime;
 
-	std::map<int, vector<int>* > candidates;
+	std::map<int, vector<int> > candidates;
 	int * embedding;
 	std::map<int, int> inverseEmbedding; ///inverse mapping W: V(g) -> V(q)
 

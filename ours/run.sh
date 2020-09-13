@@ -1,57 +1,22 @@
-method=recache
- for size in 10
- do
-     for cache in 20
-     do
-         for dataset in wordnet
-         do
-             for rate in 10
-             do
-                 for t in 0.2 0.25 0.5 0.75 1
-                 do
-                     resultdir="../../final_results/tout${t}_cache${cache}_${dataset}_${size}_${rate}_new"
-                     datadir="../data/${dataset}_${size}_${rate}_new"
-                     if [ ! -d $resultdir ]
-                     then
-                         mkdir $resultdir
-                     fi
- 
-                     for ((i=0;i<=2;i++))
-                     do
-                         resultfile="$resultdir/${method}$i.txt"
-                         notsucceed=1
-                         if [ -f $resultfile ]
-                         then
-                             test=`tail -n 1 $resultfile`
-                             if [[ $test == "Number of found:"* ]]
-                             then
-                                 notsucceed=0
-                                 echo "Succeed $i"
-                             fi
-                         fi
-                         tries=0
-                         while [ $notsucceed -eq 1 ]
-                         do
-                             ./out -e 100 -s $cache -t $t -c ${datadir}/d.dimas ${datadir}/query$i/ > $resultfile
-                             test=`tail -n 1 $resultfile`
-                             ((tries++))
-                             if [ $tries -ge 10 ]
-                             then
-                                 notsucceed=0
-                                 echo "Give up $i"
-                                 rm $resultfile
-                             elif [[ $test == "Number of found:"* ]]
-                             then
-                                 notsucceed=0
-                                 echo "Succeed $i"
-                             else
-                                 echo "Re-run $i"
-                             fi
-                         done
-                         echo "=================================="
-                     done
-                 done
-             done
-         done
-     done
- done
+tout=1.0
+for graph_size in 10
+do 
+    for dataset in yeast human cora citeseer pubmed worndet
+    do 
+        datadir="../data/${dataset}_nnode${graph_size}_fam50_rate10_case20_len1000_randomFalse"
+        savedir="../results/${dataset}_nnode${graph_size}"
+        if [ ! -d savedir ] 
+        then
+            mkdir -p $savedir
+        fi
+
+        for ((i=0;i<=9;i++))
+        do 
+            echo ${dataset}_${graph_size}_${i}
+            ./out -t ${tout} -e 100 -c -s 50 -h -k 1 -d -b ${datadir}/d.dimas ${datadir}/query${i}_weighted/  | tee ${savedir}/exp7_ours_${dataset}_nnode${graph_size}_fam50_rate10_case20_len1000_randomFalse_set${i}_tout${tout}.txt
+            ./out -t ${tout} -e 100 ${datadir}/d.dimas ${datadir}/query${i}_weighted/  | tee ${savedir}/exp7_turboiso_${dataset}_nnode${graph_size}_fam50_rate10_case20_len1000_randomFalse_set${i}_tout${tout}.txt
+            ./out -t ${tout} -e 100 -v ${datadir}/d.dimas ${datadir}/query${i}_weighted/  | tee ${savedir}/exp7_vf2_${dataset}_nnode${graph_size}_fam50_rate10_case20_len1000_randomFalse_set${i}_tout${tout}.txt
+            ../MQO/test/a.out -dg ${datadir}/d.graph -qg ${datadir}/q${i}.graph -subIso TURBOISO -queryProTest -mqo -maxrc 5000 -nresult 100 -out temp -tout  ${tout} -dim 128 -batch 50 | tee ${savedir}/exp7_mqo_${dataset}_nnode${graph_size}_fam50_rate10_case20_len1000_randomFalse_set${i}_tout${tout}.txt
+        done
+    done
+done

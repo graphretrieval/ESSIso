@@ -131,12 +131,13 @@ public:
 	typedef node* link;
 
 	int graphId;
+public:
+	std::vector<Vertex> vertexList;
 
 private:
 	int numberOfVertex, numberOfEdges;
 	faiss::IndexFlatL2  * index;
 	bool digraph;
-	std::vector<Vertex> vertexList;
 	std::vector<Edge> edgeList;
 
 
@@ -146,13 +147,15 @@ private:
 	 * The labelset of the graph will be initialized when inserting all the vertices
 	 */
 	std::set<int> labelSet;
+public:
+	std::map<int, std::vector<int>> labelVertexList;
 
 private:
 
 	/*
 	 * invert list of (label -> vertexes)
 	 */
-	std::map<int, std::vector<int>> labelVertexList;
+	// std::map<int, std::vector<int>> labelVertexList;
 	
 	/*
 	 * invert list of (label pair -> edges) 

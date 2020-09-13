@@ -1,4 +1,6 @@
 *pt
+*.zip
+results/*
 data/*
 .vscode/
 MQO/test/*.cpp

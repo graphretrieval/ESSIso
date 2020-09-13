@@ -14,10 +14,15 @@ from utils.corrupt_graph import remove_edge, remove_node, add_edge, add_node
 from networkx.algorithms import isomorphism
 from python_emb import * 
 
-def create_dimas_graph_format(graph, id_map, embedding, graph_index, multi2single_label, family_index=0):
+def create_dimas_graph_format(graph, id_map, embedding, graph_index, multi2single_label, family_index=0, weighted_sum=False):
     inverted_id_map = {idx:node for node,idx in id_map.items()}
     lines = ['p edge {} {} {} {}\n'.format(len(graph.nodes), len(graph.edges), embedding.shape[-1], family_index)]
-    lines.append(' '.join(map(str, embedding.mean(0))) + '\n')
+    if weighted_sum:
+        weighted = np.array([ [ graph.degree(inverted_id_map[n]) ] for n in range(len(inverted_id_map))])
+        embedding = (embedding*weighted).sum(0)/np.sum(weighted)
+    else:
+        embedding = embedding.mean(0)
+    lines.append(' '.join(map(str, embedding)) + '\n')
     for n in range(len(inverted_id_map)):
         label = multi2single_label[tuple(graph.nodes[inverted_id_map[n]]['label'])]
         lines.append('n {} {}\n'.format(n, label))
@@ -60,6 +65,8 @@ torch.manual_seed(args.seed)
 torch.cuda.manual_seed(args.seed)
 
 ori_emb_model, ori_graph_emb, ori_graph_data = get_model_and_data(args)
+import sys
+sys.exit(0)
 avg_deg = [ori_graph_data.G.degree(i) for i in ori_graph_data.G.nodes]
 print(len(ori_graph_data.G.nodes), len(ori_graph_data.G.edges))
 print(len(set(ori_graph_data.multi2single_label.values())))
@@ -137,16 +144,18 @@ thirs_value = second_value+x
 
 
 # n_family = args.num_subgraphs
-RANDOM = True
+RANDOM = False
 n_family = 50
 N_CASES = 20
 LENGTH = 1000
-for max_subgraph_nodes in [10, 15]:
-    for rate in [10]:
+for max_subgraph_nodes in [10, 15, 20, 25, 30]:
+    for rate in [10, 20, 30]:
     # for rate in [args.rate]:
-        savedir = os.path.join(args.embedding_model, '{}_nnode{}_fam{}_rate{}_case{}_len{}_random'.format(args.prefix.split('/')[-1], max_subgraph_nodes, n_family, rate, N_CASES, LENGTH, RANDOM))
+        savedir = os.path.join(args.embedding_model, '{}_nnode{}_fam{}_rate{}_case{}_len{}_random{}'.format(args.prefix.split('/')[-1], max_subgraph_nodes, n_family, rate, N_CASES, LENGTH, RANDOM))
         if not os.path.isdir(savedir):
             os.makedirs(savedir)
+        else:
+            continue
 
         with open(os.path.join(savedir, 'd.dimas'), 'w') as f:
             for line in create_dimas_graph_format(ori_graph_data.G, ori_graph_data.id_map, new_ori_graph_emb, 0, ori_graph_data.multi2single_label):
@@ -241,8 +250,13 @@ for max_subgraph_nodes in [10, 15]:
 
             query_lines = [] 
             dimas_query_lines = [] 
+            dimas_query_lines_weighted = [] 
             if RANDOM:
-                random.shuffle(subgraph_queries)
+                c = list(zip(subgraph_queries, family_indexes))
+                random.shuffle(c)
+
+                subgraph_queries, family_indexes = zip(*c)
+
             for i, subgraph in tqdm(enumerate(subgraph_queries), desc="gen embedding subgraph"):
                 sub_id_map, sub_raw_feats, all_sub_adj, sub_degree = query_machine.create_subgraph_map(subgraph)
 
@@ -250,13 +264,19 @@ for max_subgraph_nodes in [10, 15]:
                 embedding_subgraph = embedding_subgraph.detach().cpu().numpy()
                 if not np.isnan(embedding_subgraph).any():
                     dimas_query_lines.append(create_dimas_graph_format(subgraph, sub_id_map, embedding_subgraph, i, ori_graph_data.multi2single_label, family_indexes[i]))
+                    dimas_query_lines_weighted.append(create_dimas_graph_format(subgraph, sub_id_map, embedding_subgraph, i, ori_graph_data.multi2single_label, family_indexes[i], True))
                     query_lines += create_graph_format(subgraph, sub_id_map, embedding_subgraph, i, ori_graph_data.multi2single_label)
 
             if not os.path.isdir(os.path.join(savedir, 'query{}'.format(set_index))):
                 os.mkdir(os.path.join(savedir, 'query{}'.format(set_index)))
-
+            if not os.path.isdir(os.path.join(savedir, 'query{}_weighted'.format(set_index))):
+                os.mkdir(os.path.join(savedir, 'query{}_weighted'.format(set_index)))
             for i, query_line in enumerate(dimas_query_lines):
                 with open(os.path.join(savedir,  'query{}'.format(set_index) , 'q{:04d}.dimas'.format(i)), 'w') as f:
+                    for line in query_line:
+                        f.write(line)
+            for i, query_line in enumerate(dimas_query_lines_weighted):
+                with open(os.path.join(savedir,  'query{}_weighted'.format(set_index) , 'q{:04d}.dimas'.format(i)), 'w') as f:
                     for line in query_line:
                         f.write(line)
             with open(os.path.join(savedir, 'q{}.graph'.format(set_index)), 'w') as f:
