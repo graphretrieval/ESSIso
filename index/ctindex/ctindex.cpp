@@ -493,12 +493,12 @@ int main(int argc, char** argv) {
             std::string temp = "";
             for (const auto & i : path)
                 temp += std::to_string(i);
-            hashIndexes.insert(hashFinger(temp, 4096));
+            hashIndexes.insert(hashFinger(temp, 128));
         }
         auto trees = find_all_trees(dataGraph);
 
         for (const auto& tree: trees) 
-            hashIndexes.insert(hashFinger(tree, 4096));
+            hashIndexes.insert(hashFinger(tree, 128));
         // std::vector<float> embedding = std::vector<float>(4096, 0);
         // for (const auto i : hashIndexes) {
         //     if (i >=4096) std::cout << i << " " << std::endl;
