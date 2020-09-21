@@ -7,7 +7,7 @@ Simple supervised GraphSAGE model as well as examples running the model
 on the Cora and Pubmed datasets.
 """
 
-def train_model(model, graph_data, batch_size, epochs, learning_rate):
+def train_model(model, graph_data, batch_size, epochs, learning_rate, save_model):
     model.set_params(graph_data.full_adj, graph_data.deg, graph_data.feats)
 
     optimizer = torch.optim.Adam(filter(lambda p : p.requires_grad, model.parameters()), lr=learning_rate)
@@ -40,7 +40,7 @@ def train_model(model, graph_data, batch_size, epochs, learning_rate):
             optimizer.step()
             if iter % 4 == 0:
                 print(loss)
-    
+        torch.save(model.state_dict(), save_model[:-3]+'_'+str(epoch)+save_model[-3:])
     return model
 
 

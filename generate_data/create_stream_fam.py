@@ -13,6 +13,7 @@ import time
 from utils.corrupt_graph import remove_edge, remove_node, add_edge, add_node
 from networkx.algorithms import isomorphism
 from python_emb import * 
+from collections import defaultdict
 
 def create_dimas_graph_format(graph, id_map, embedding, graph_index, multi2single_label, family_index=0, weighted_sum=False):
     inverted_id_map = {idx:node for node,idx in id_map.items()}
@@ -72,6 +73,7 @@ print(len(ori_graph_data.G.nodes), len(ori_graph_data.G.edges))
 print(len(set(ori_graph_data.multi2single_label.values())))
 print(len(list(ori_graph_data.multi2single_label.keys())[0]))
 print(sum(avg_deg)/len(avg_deg))
+print(Counter([ori_graph_data.multi2single_label[tuple(ori_graph_data.G.nodes[i]['label'])] for i in ori_graph_data.G]))
 # data_lines = create_graph_format(ori_graph_data.G, ori_graph_data.id_map, ori_graph_emb, 0, ori_graph_data.multi2single_label)
 # if not os.path.isdir(args.embedding_model):
 #     os.makedirs(args.embedding_model)
@@ -148,15 +150,16 @@ RANDOM = False
 n_family = 50
 N_CASES = 20
 LENGTH = 1000
-for n_family in range(10,101,10):
-    for max_subgraph_nodes in [10]:
-        for rate in [10]:
-        # for rate in [args.rate]:
+MAX_FAMILY = 100
+for max_subgraph_nodes in [10]:
+    for rate in [10]:
+    # for rate in [args.rate]:
+        for n_family in range(10, 101, 10):
             savedir = os.path.join(args.embedding_model, '{}_nnode{}_fam{}_rate{}_case{}_len{}_random{}'.format(args.prefix.split('/')[-1], max_subgraph_nodes, n_family, rate, N_CASES, LENGTH, RANDOM))
             if not os.path.isdir(savedir):
                 os.makedirs(savedir)
-            else:
-                continue
+            # else:
+            #     continue
 
             with open(os.path.join(savedir, 'd.dimas'), 'w') as f:
                 for line in create_dimas_graph_format(ori_graph_data.G, ori_graph_data.id_map, new_ori_graph_emb, 0, ori_graph_data.multi2single_label):
@@ -166,60 +169,84 @@ for n_family in range(10,101,10):
                 for line in create_graph_format(ori_graph_data.G, ori_graph_data.id_map, new_ori_graph_emb, 0, ori_graph_data.multi2single_label):
                     f.write(line)
 
-            for set_index in range(10):
-                core_nodes = random.sample([node for node in query_machine.ori_graph], min(3000, len(query_machine.ori_graph)))
-                core_graphs = []
-                case_dict = {}
-                for core_node in core_nodes:
-                    n_tries = 0
-                    success = False
-                    while(True):
-                        sampled_node = stat_(core_node, max_subgraph_nodes)
-                        biggraph = ori_graph_data.G.subgraph(sampled_node)
-                        n_tries+=1
-                        if nx.is_connected(biggraph) and len(biggraph) == max_subgraph_nodes:
-                            core_graphs.append(biggraph)
-                            success = True
-                            break
-                        if n_tries > 10:
-                            break   
-                    if success:
-                        case_dict[len(core_graphs)-1] = {'case1': biggraph, 'case2':[], 'case3':[]}
-                        # N_CASES = random.randint(10,100)
-                        for _ in range(N_CASES):
-                            n_tries = 0
-                            while(True):
-                                new_sampled_node = [i for i in biggraph.nodes()]
-                                n_more_node = random.randint(1,2)
-                                n_more_node = 1
-                                candidates_node = set()
-                                for node in new_sampled_node:
-                                    for neigh_node in ori_graph_data.G.neighbors(node):
-                                        if neigh_node not in new_sampled_node:
-                                            candidates_node.add(neigh_node)
-                                new_sampled_node += random.sample(candidates_node, min(len(candidates_node), n_more_node))
-                                subgraph = ori_graph_data.G.subgraph(new_sampled_node)
-                                if len(subgraph)  < max_subgraph_nodes:
-                                    break
-                                if nx.is_connected(subgraph):
-                                    case_dict[len(core_graphs)-1]['case2'].append(subgraph)
-                                    break
-                                n_tries+=1
-                                if n_tries >=20:
-                                    break
-                            n_tries = 0
-                            while(True):
-                                subgraph = remove_node(biggraph, 1)
-                                if len(subgraph)  < max_subgraph_nodes-1:
-                                    break
-                                if nx.is_connected(subgraph):
-                                    case_dict[len(core_graphs)-1]['case3'].append(subgraph)
-                                    break
-                                n_tries+=1
-                                if n_tries >=20:
-                                    break
-                    if len(core_graphs) >= n_family:
+        for set_index in tqdm(range(10)):
+            # core_nodes = random.sample([node for node in query_machine.ori_graph], min(3000, len(query_machine.ori_graph)))
+            # core_nodes = list(query_machine.ori_graph.nodes)
+            labels_dict = defaultdict(list)
+            for node in ori_graph_data.G.nodes:
+                if ori_graph_data.multi2single_label[ tuple(ori_graph_data.G.nodes[node]['label']) ] == 2:
+                    labels_dict[0].append(node)
+                else:
+                    labels_dict[1].append(node)
+
+            # random.shuffle(core_nodes)
+            for i in labels_dict:
+                random.shuffle(labels_dict[i])
+
+            core_graphs = []
+            case_dict = {}
+            # for core_node in core_nodes:
+            curr_label = 0
+            curr_nodes = labels_dict[curr_label]
+            while(True):
+                core_node = curr_nodes[0]
+                # if ori_graph_data.multi2single_label[ tuple(ori_graph_data.G.nodes[core_node]['label']) ] == 2:
+                #     continue
+                n_tries = 0
+                success = False
+                while(True):
+                    sampled_node = stat_(core_node, max_subgraph_nodes)
+                    biggraph = ori_graph_data.G.subgraph(sampled_node)
+                    n_tries+=1
+                    if nx.is_connected(biggraph) and len(biggraph) == max_subgraph_nodes:
+                        core_graphs.append(biggraph)
+                        success = True
                         break
+                    if n_tries > 10:
+                        break  
+                del curr_nodes[0] 
+                if success:
+                    curr_label = 1 - curr_label 
+                    curr_nodes = labels_dict[curr_label]
+                    case_dict[len(core_graphs)-1] = {'case1': biggraph, 'case2':[], 'case3':[]}
+                    # N_CASES = random.randint(10,100)
+                    for _ in range(N_CASES):
+                        n_tries = 0
+                        while(True):
+                            new_sampled_node = [i for i in biggraph.nodes()]
+                            n_more_node = random.randint(1,2)
+                            # n_more_node = 1
+                            candidates_node = set()
+                            for node in new_sampled_node:
+                                for neigh_node in ori_graph_data.G.neighbors(node):
+                                    if neigh_node not in new_sampled_node:
+                                        candidates_node.add(neigh_node)
+                            new_sampled_node += random.sample(candidates_node, min(len(candidates_node), n_more_node))
+                            subgraph = ori_graph_data.G.subgraph(new_sampled_node)
+                            if len(subgraph)  < max_subgraph_nodes:
+                                break
+                            if nx.is_connected(subgraph):
+                                case_dict[len(core_graphs)-1]['case2'].append(subgraph)
+                                break
+                            n_tries+=1
+                            if n_tries >=20:
+                                break
+                        n_tries = 0
+                        while(True):
+                            n_more_node = random.randint(1,2)
+                            subgraph = remove_node(biggraph, n_more_node)
+                            if len(subgraph)  < max_subgraph_nodes-1:
+                                break
+                            if nx.is_connected(subgraph):
+                                case_dict[len(core_graphs)-1]['case3'].append(subgraph)
+                                break
+                            n_tries+=1
+                            if n_tries >=20:
+                                break
+                if len(core_graphs) >= MAX_FAMILY:
+                    break
+            for n_family in range(10, 101, 10):
+                savedir = os.path.join(args.embedding_model, '{}_nnode{}_fam{}_rate{}_case{}_len{}_random{}'.format(args.prefix.split('/')[-1], max_subgraph_nodes, n_family, rate, N_CASES, LENGTH, RANDOM))
                 subgraph_queries = core_graphs[:int(n_family)]
                 family_indexes = list(range(int(n_family)))
 
@@ -238,11 +265,11 @@ for n_family in range(10,101,10):
                         subgraph_queries.append(random.choice(case_dict[random_index]['case3']))
                         family_indexes.append(random_index)
                     else:
-                        temp_list = set(range(len(core_graphs)))
+                        temp_list = set(range(n_family))
                         temp_list = temp_list.difference(family_indexes[-int(n_family):])
                         temp_list = list(temp_list)
                         if len(temp_list) ==0:
-                            temp_list = list(range(len(core_graphs)))
+                            temp_list = list(range(n_family))
                             temp_list.remove(random_index)
                         random_index = random.choice(temp_list)
                         subgraph_queries.append(case_dict[random_index]['case1'])

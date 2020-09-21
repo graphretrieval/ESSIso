@@ -334,6 +334,7 @@ static char args_doc[] = "HEURISTIC FILENAME1 FILENAME2 FILENAME3";
 static struct argp_option options[] = {
     {"emb", 'e', 0, 0, "Use embedding"},
     {"cti", 'c', 0, 0, "Use ctindex"},
+    {"wl", 'w', 0, 0, "Use wl"},
     { 0 }
 };
 
@@ -347,6 +348,7 @@ static struct {
     int arg_num;
     bool embedding;
     bool ctindex;
+    bool wl;
 
 } arguments;
 
@@ -360,6 +362,7 @@ void set_default_arguments() {
     arguments.arg_num = 0;
     arguments.embedding = false;
     arguments.ctindex = false;
+    arguments.wl = false;
 }
 
 static error_t parse_opt (int key, char *arg, struct argp_state *state) {
@@ -369,6 +372,9 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state) {
             break;
         case 'c':
             arguments.ctindex = true;
+            break;
+        case 'w':
+            arguments.wl = true;
             break;
         case ARGP_KEY_ARG:
             if (arguments.arg_num == 0) {
@@ -499,16 +505,42 @@ int main(int argc, char** argv) {
 
         for (const auto& tree: trees) 
             hashIndexes.insert(hashFinger(tree, 128));
-        // std::vector<float> embedding = std::vector<float>(4096, 0);
-        // for (const auto i : hashIndexes) {
-        //     if (i >=4096) std::cout << i << " " << std::endl;
-        //     else 
-        //     embedding[(int)i] = 1.0;
-        // }
-        for (const auto i : hashIndexes)
-            std::cout << i << " ";
-        std::cout << std::endl;
-        // std::cout << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl; 
+        std::vector<float> embedding = std::vector<float>(4096, 0);
+        for (const auto i : hashIndexes) {
+            if (i >=4096) std::cout << i << " " << std::endl;
+            else 
+            embedding[(int)i] = 1.0;
+        }
+        // for (const auto i : hashIndexes)
+        //     std::cout << i << " ";
+        // std::cout << std::endl;
+        std::cout << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl; 
+        // print_paths(paths);       
+    }
+
+    /* =================================================================
+                        WL zone
+    ====================================================================*/
+    if (arguments.wl) {
+        std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+        std::map<std::pair<int,std::vector<int> >, int> wlFeatures; 
+        for (int nodeIndex = 0; nodeIndex < dataGraph.label.size(); nodeIndex++) {
+            std::map<int, std::vector<int>> vertexLabelVertex;
+            int nodeLabel = dataGraph.label[nodeIndex];
+            std::vector<int> neighLabels;
+            for (int neighborIndex : dataGraph.adjList[nodeIndex]) {
+                neighLabels.push_back(dataGraph.label[neighborIndex]);
+            }
+            std::sort(neighLabels.begin(), neighLabels.end());
+            std::map<std::pair < int, std::vector<int> > , int>::iterator it = wlFeatures.find({nodeLabel, neighLabels});
+            if (it == wlFeatures.end()) {
+                wlFeatures.insert( {{nodeLabel, neighLabels}, 1} );
+            } else {
+                it->second += 1;
+            }
+        }
+
+        std::cout << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl; 
         // print_paths(paths);       
     }
 

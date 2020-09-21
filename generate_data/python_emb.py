@@ -77,7 +77,7 @@ def get_model_and_data(args):
         ori_emb_model.set_params(ori_graph_data.full_adj, ori_graph_data.deg, ori_graph_data.feats)
     else:
         print("training from scratch...")
-        train_model(ori_emb_model, ori_graph_data, args.batch_size, args.epochs, args.learning_rate)
+        train_model(ori_emb_model, ori_graph_data, args.batch_size, args.epochs, args.learning_rate, args.save_model)
         torch.save(ori_emb_model.state_dict(), args.save_model)
 
     ori_emb_model.eval()
