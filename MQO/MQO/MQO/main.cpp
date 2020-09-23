@@ -257,7 +257,7 @@ int main(int argc, char* argv[]) {
 					totalTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000.0;
 					numOfFound += mqo.numOfFound;
 				}
-				cout << " Overhead Time: " << overHeadTime/1000 << endl;
+				cout << " Overhead Time: " << overHeadTime/1000 << endl; // total in millisecond
 				cout << " MQO Time: " << totalTime << "(milliseconds)" << endl;
 				cout << "Number of found: " << numOfFound << endl;
 			}

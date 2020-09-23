@@ -259,7 +259,7 @@ int main(int argc, char** argv) {
         }
         std::vector<std::map<int,int>> resultsGraph;
         try {
-            turboIsoSlover.timeOut = 0.001;
+            turboIsoSlover.timeOut = 10;
             turboIsoSlover.getAllSubGraphs(dataGraph, queryGraph, 0, arguments.maxResult);
         }
         catch(std::runtime_error& e) {
@@ -296,7 +296,6 @@ int main(int argc, char** argv) {
             int bestIndex = -1;
             std::unordered_map<int, float> distanceMap;
             std::priority_queue<std::pair<float, int>> distanceQueue;
-            std::chrono::steady_clock::time_point sStartTime = std::chrono::steady_clock::now();
             if (!arguments.brutal) {
                 graphCache.kScanCache(queryGraph, &distanceQueue, &distanceMap, arguments.k);
                 std::cout << "No comparasion " << distanceMap.size() << std::endl;                
@@ -389,6 +388,7 @@ int main(int argc, char** argv) {
                 // std::cout << std::endl;
             }
             totalScanTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000.0;
+            overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count();
             bool useCache = false;
             if (cachedGraphIndexCase1 != -1) {
                 hit ++;
@@ -400,7 +400,9 @@ int main(int argc, char** argv) {
                     useCache = true;
                 }
                 s = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000000.0;
+                std::chrono::steady_clock::time_point sStart2 = std::chrono::steady_clock::now();
                 graphCache.updateCacheHit(cachedGraphIndexCase1, s, graphIndex);
+                overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart2).count();
             } else if (cachedGraphIndexCase3 != -1) {
                 hit ++;
                 std::cout << "Found case 3:" << cachedGraphIndexCase3 << std::endl;
@@ -411,7 +413,9 @@ int main(int argc, char** argv) {
                     useCache = true;               
                 }
                 s = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000000.0;
+                std::chrono::steady_clock::time_point sStart2 = std::chrono::steady_clock::now();
                 graphCache.updateCacheHit(cachedGraphIndexCase3, s, graphIndex);
+                overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart2).count();
             } else if (cachedGraphIndexCase2 != -1) {
                 std::vector<std::map<int,int>> * cachedEmbedding = graphCache.getEmbeddingsById(cachedGraphIndexCase2); 
                 if (cachedEmbedding != NULL) {
@@ -440,6 +444,7 @@ int main(int argc, char** argv) {
                         resultsGraph = turboIsoSlover.allMappings;
                     }
                     std::cout << "Found " << resultsGraph.size() << " results" << std::endl;
+                    std::chrono::steady_clock::time_point sStart2 = std::chrono::steady_clock::now();
                     if (resultsGraph.size()>0) {
                         if (graphCache.isLRU || graphCache.isLFU) {
                             std::cout << "add query graph " << graphIndex << " to cache" << std::endl; 
@@ -465,9 +470,9 @@ int main(int argc, char** argv) {
                     }
                     s = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count()/1000000.0;
                     graphCache.updateCacheHit(cachedGraphIndexCase2, s, graphIndex);
+                    overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart2).count();
                 } 
             } 
-            overHeadTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - sStart).count();
             if (!useCache) {
                 std::cout << "Find from the beginning" << std::endl;
                 bool timedout = false;

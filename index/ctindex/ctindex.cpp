@@ -483,7 +483,7 @@ int main(int argc, char** argv) {
             temp = temp/features.size();
             embedding.push_back(temp);
         }
-        std::cout << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl;
+        std::cout << arguments.datagraph << "\t" << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl; 
                     
     } 
     
@@ -499,12 +499,12 @@ int main(int argc, char** argv) {
             std::string temp = "";
             for (const auto & i : path)
                 temp += std::to_string(i);
-            hashIndexes.insert(hashFinger(temp, 128));
+            hashIndexes.insert(hashFinger(temp, 4096));
         }
         auto trees = find_all_trees(dataGraph);
 
         for (const auto& tree: trees) 
-            hashIndexes.insert(hashFinger(tree, 128));
+            hashIndexes.insert(hashFinger(tree, 4096));
         std::vector<float> embedding = std::vector<float>(4096, 0);
         for (const auto i : hashIndexes) {
             if (i >=4096) std::cout << i << " " << std::endl;
@@ -514,7 +514,7 @@ int main(int argc, char** argv) {
         // for (const auto i : hashIndexes)
         //     std::cout << i << " ";
         // std::cout << std::endl;
-        std::cout << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl; 
+        std::cout << arguments.datagraph << "\t" << std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() << std::endl; 
         // print_paths(paths);       
     }
 
