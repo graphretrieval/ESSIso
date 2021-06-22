@@ -1,2 +1,2 @@
-# FaSSIso
-Fast Streaming Subgraph Isomorphism with Graph Neural Networks
+# ESSIso
+Efficient Streaming Subgraph Isomorphism with Graph Neural Networks
